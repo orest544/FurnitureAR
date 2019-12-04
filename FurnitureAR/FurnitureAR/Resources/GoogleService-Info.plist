@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>510260164473-11eo0ktl6612ridvfjd760c78gi8pmj9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.510260164473-11eo0ktl6612ridvfjd760c78gi8pmj9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDGNY0yGxebZfW-OZUpFzsDnw3SQi5Mqec</string>
+	<key>GCM_SENDER_ID</key>
+	<string>510260164473</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.oapps.FurnitureAR</string>
+	<key>PROJECT_ID</key>
+	<string>furniturear-63a2d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>furniturear-63a2d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:510260164473:ios:5619565c79f5a6067521a8</string>
+	<key>DATABASE_URL</key>
+	<string>https://furniturear-63a2d.firebaseio.com</string>
+</dict>
+</plist>
