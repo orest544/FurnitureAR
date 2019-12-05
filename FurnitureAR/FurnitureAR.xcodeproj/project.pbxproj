@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,7 +30,6 @@
 		04CD995A239815860016E002 /* NetworkingConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9954239815860016E002 /* NetworkingConfigurations.swift */; };
 		04CD995B239815860016E002 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9955239815860016E002 /* HTTPMethod.swift */; };
 		04CD995C239815860016E002 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9956239815860016E002 /* NetworkingError.swift */; };
-		04CD995E2398164E0016E002 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD995D2398164E0016E002 /* MainTabBarController.swift */; };
 		04CD99652398188B0016E002 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD99612398188B0016E002 /* Anchor.swift */; };
 		04CD99662398188B0016E002 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD99622398188B0016E002 /* Helpers.swift */; };
 		04CD99672398188B0016E002 /* LayoutEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD99632398188B0016E002 /* LayoutEnums.swift */; };
@@ -38,6 +37,7 @@
 		04CD996B239819620016E002 /* HTTPURLResponse+IsStatusCodeInOkRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9969239819620016E002 /* HTTPURLResponse+IsStatusCodeInOkRange.swift */; };
 		04CD996C239819620016E002 /* URLRequest+HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD996A239819620016E002 /* URLRequest+HTTPMethod.swift */; };
 		04CD996F23985F010016E002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CD996E23985F010016E002 /* GoogleService-Info.plist */; };
+		04CD9971239861400016E002 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9970239861400016E002 /* Image.swift */; };
 		8A84F2778C4B633556DA5E28 /* Pods_FurnitureARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AEA2AFAAD30DC8981EC8D1 /* Pods_FurnitureARTests.framework */; };
 		AA2503F35083805B11F059D3 /* Pods_FurnitureAR_FurnitureARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD753E175E06B3E60AF7A74 /* Pods_FurnitureAR_FurnitureARUITests.framework */; };
 		DDC2F99185F13CCE9E3F445C /* Pods_FurnitureAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913F3E2D22BD6E7F3CFF97F /* Pods_FurnitureAR.framework */; };
@@ -90,7 +90,6 @@
 		04CD9954239815860016E002 /* NetworkingConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConfigurations.swift; sourceTree = "<group>"; };
 		04CD9955239815860016E002 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		04CD9956239815860016E002 /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
-		04CD995D2398164E0016E002 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		04CD99612398188B0016E002 /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
 		04CD99622398188B0016E002 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		04CD99632398188B0016E002 /* LayoutEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutEnums.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		04CD9969239819620016E002 /* HTTPURLResponse+IsStatusCodeInOkRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+IsStatusCodeInOkRange.swift"; sourceTree = "<group>"; };
 		04CD996A239819620016E002 /* URLRequest+HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HTTPMethod.swift"; sourceTree = "<group>"; };
 		04CD996E23985F010016E002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04CD9970239861400016E002 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2AD753E175E06B3E60AF7A74 /* Pods_FurnitureAR_FurnitureARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureAR_FurnitureARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33822514748E7F845F53B7C8 /* Pods-FurnitureARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureARTests.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureARTests/Pods-FurnitureARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3843495668B2E421D87CB7B2 /* Pods-FurnitureAR-FurnitureARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureAR-FurnitureARUITests.release.xcconfig"; path = "Target Support Files/Pods-FurnitureAR-FurnitureARUITests/Pods-FurnitureAR-FurnitureARUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				040D598E2397FDD5002B5FA4 /* ViewController.swift */,
-				04CD995D2398164E0016E002 /* MainTabBarController.swift */,
 				040D59902397FDD5002B5FA4 /* Main.storyboard */,
 			);
 			path = Flow;
@@ -200,11 +199,11 @@
 		040D59BE2397FE4D002B5FA4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				04CD995F239818740016E002 /* Helper */,
-				04CD9950239815760016E002 /* Networking */,
-				04CD993E239806B70016E002 /* Extension */,
 				040D598A2397FDD5002B5FA4 /* AppDelegate.swift */,
 				040D598C2397FDD5002B5FA4 /* SceneDelegate.swift */,
+				04CD995F239818740016E002 /* Helper */,
+				04CD993E239806B70016E002 /* Extension */,
+				04CD9950239815760016E002 /* Networking */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -253,6 +252,7 @@
 		04CD995F239818740016E002 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				04CD9970239861400016E002 /* Image.swift */,
 				04CD99602398188B0016E002 /* Layout */,
 			);
 			path = Helper;
@@ -288,7 +288,6 @@
 				33822514748E7F845F53B7C8 /* Pods-FurnitureARTests.debug.xcconfig */,
 				B1EC24A47F8EF0A43BA51373 /* Pods-FurnitureARTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -557,10 +556,10 @@
 				04CD99672398188B0016E002 /* LayoutEnums.swift in Sources */,
 				040D598D2397FDD5002B5FA4 /* SceneDelegate.swift in Sources */,
 				04CD994D239807470016E002 /* SCNNode+Size.swift in Sources */,
-				04CD995E2398164E0016E002 /* MainTabBarController.swift in Sources */,
 				04CD9958239815860016E002 /* NetworkingServer.swift in Sources */,
 				04CD9957239815860016E002 /* URLConstructable.swift in Sources */,
 				04CD996C239819620016E002 /* URLRequest+HTTPMethod.swift in Sources */,
+				04CD9971239861400016E002 /* Image.swift in Sources */,
 				04CD994E239807470016E002 /* ARHitTestResult+position.swift in Sources */,
 				04CD995B239815860016E002 /* HTTPMethod.swift in Sources */,
 				04CD995A239815860016E002 /* NetworkingConfigurations.swift in Sources */,

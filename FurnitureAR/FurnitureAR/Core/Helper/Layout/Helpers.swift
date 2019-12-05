@@ -28,7 +28,7 @@ extension NSLayoutConstraint {
     }
     
     func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
-        return NSLayoutConstraint(item: firstItem,
+        return NSLayoutConstraint(item: firstItem as Any,
                                   attribute: firstAttribute,
                                   relatedBy: relation,
                                   toItem: secondItem,

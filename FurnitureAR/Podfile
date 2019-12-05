@@ -7,7 +7,7 @@ target 'FurnitureAR' do
 
   # Pods for FurnitureAR
 
-pod 'Firebase/Database'
+pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 
   target 'FurnitureARTests' do

@@ -11,7 +11,7 @@ import SceneKit
 extension SCNNode {
     static func makeSelectArea(for node: SCNNode) -> SCNNode {
         let selectArea = SCNNode(geometry: node.selectAreaGeometry)
-        selectArea.geometry?.firstMaterial?.diffuse.contents = DefaultImage.select_area.image
+        selectArea.geometry?.firstMaterial?.diffuse.contents = ImageProvider.selectedArea.image
         selectArea.position = node.presentation.position
         selectArea.eulerAngles.x = -.pi / 2
         selectArea.name = "selectArea"
