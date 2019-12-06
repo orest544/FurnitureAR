@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Helpfull methods
 extension AppDelegate {
     private func setRootVC() {
-        let rootVC = UIStoryboard.AR.initial
+        let rootVC = UIStoryboard.Furniture.initial
         
         let window = UIWindow()
         window.rootViewController = rootVC

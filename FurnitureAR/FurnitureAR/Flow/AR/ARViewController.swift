@@ -88,7 +88,6 @@ class ARViewController: UIViewController {
     
     func setAddButtonImages() {
         addVirtualObjectButton.imageEdgeInsets = .zero
-        
         addVirtualObjectButton.setImage(ImageProvider.add.image, for: .normal)
     }
     
