@@ -8,22 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		040D598B2397FDD5002B5FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D598A2397FDD5002B5FA4 /* AppDelegate.swift */; };
-		040D598D2397FDD5002B5FA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D598C2397FDD5002B5FA4 /* SceneDelegate.swift */; };
-		040D598F2397FDD5002B5FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D598E2397FDD5002B5FA4 /* ViewController.swift */; };
-		040D59922397FDD5002B5FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040D59902397FDD5002B5FA4 /* Main.storyboard */; };
 		040D59952397FDD5002B5FA4 /* FurnitureAR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040D59932397FDD5002B5FA4 /* FurnitureAR.xcdatamodeld */; };
 		040D59972397FDD6002B5FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040D59962397FDD6002B5FA4 /* Assets.xcassets */; };
 		040D599A2397FDD6002B5FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040D59982397FDD6002B5FA4 /* LaunchScreen.storyboard */; };
 		040D59A52397FDD6002B5FA4 /* FurnitureARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D59A42397FDD6002B5FA4 /* FurnitureARTests.swift */; };
 		040D59B02397FDD6002B5FA4 /* FurnitureARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D59AF2397FDD6002B5FA4 /* FurnitureARUITests.swift */; };
+		045E9434239ACBE4005441D6 /* Collection+HasElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9433239ACBE4005441D6 /* Collection+HasElements.swift */; };
+		045E9437239AD7CE005441D6 /* Float4x4+Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9436239AD7CE005441D6 /* Float4x4+Translation.swift */; };
+		045E9439239AD80C005441D6 /* CGPoint+Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9438239AD80C005441D6 /* CGPoint+Vector.swift */; };
+		045E943F239AD909005441D6 /* UIGestureRecognizer+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E943E239AD909005441D6 /* UIGestureRecognizer+Center.swift */; };
+		045E9443239ADAA1005441D6 /* Furniture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045E9442239ADAA1005441D6 /* Furniture.storyboard */; };
+		045E9445239ADB5E005441D6 /* FurnitureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9444239ADB5E005441D6 /* FurnitureListViewController.swift */; };
+		04A80AC32399B6D1005A36E3 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A80AC22399B6D1005A36E3 /* Models.scnassets */; };
+		04A80AC52399B76E005A36E3 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A80AC42399B76E005A36E3 /* AR.storyboard */; };
+		04A80ACF2399B7B9005A36E3 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80AC72399B7B8005A36E3 /* ARViewController+ARSCNViewDelegate.swift */; };
+		04A80AD02399B7B9005A36E3 /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80AC82399B7B8005A36E3 /* ThresholdPanGesture.swift */; };
+		04A80AD12399B7B9005A36E3 /* ARViewController+CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80AC92399B7B8005A36E3 /* ARViewController+CoachingOverlay.swift */; };
+		04A80AD22399B7B9005A36E3 /* ARViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80ACA2399B7B8005A36E3 /* ARViewController+Actions.swift */; };
+		04A80AD32399B7B9005A36E3 /* ARViewController+ObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80ACB2399B7B8005A36E3 /* ARViewController+ObjectSelection.swift */; };
+		04A80AD42399B7B9005A36E3 /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80ACC2399B7B9005A36E3 /* VirtualObjectARView.swift */; };
+		04A80AD52399B7B9005A36E3 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80ACD2399B7B9005A36E3 /* ARViewController.swift */; };
+		04A80AD62399B7B9005A36E3 /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80ACE2399B7B9005A36E3 /* VirtualObjectInteraction.swift */; };
+		04A80AFF2399BAAA005A36E3 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80AFD2399BAAA005A36E3 /* FocusSquareSegment.swift */; };
+		04A80B002399BAAA005A36E3 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80AFE2399BAAA005A36E3 /* FocusSquare.swift */; };
+		04A80B032399BAB0005A36E3 /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B012399BAB0005A36E3 /* VirtualObjectLoader.swift */; };
+		04A80B042399BAB0005A36E3 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B022399BAB0005A36E3 /* VirtualObject.swift */; };
+		04A80B082399BAB6005A36E3 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B062399BAB6005A36E3 /* StatusViewController.swift */; };
+		04A80B0A2399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B092399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift */; };
+		04A80B0C2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B0B2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift */; };
 		04CD9940239807310016E002 /* String+ApproximateWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD993F239807310016E002 /* String+ApproximateWidth.swift */; };
-		04CD9948239807470016E002 /* SCNNode+selectAreaGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9941239807470016E002 /* SCNNode+selectAreaGeometry.swift */; };
-		04CD9949239807470016E002 /* ARPlaneAnchor+position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9942239807470016E002 /* ARPlaneAnchor+position.swift */; };
-		04CD994A239807470016E002 /* SCNNode+makeSelectArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9943239807470016E002 /* SCNNode+makeSelectArea.swift */; };
-		04CD994B239807470016E002 /* SCNNode+makePlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9944239807470016E002 /* SCNNode+makePlane.swift */; };
 		04CD994C239807470016E002 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9945239807470016E002 /* UIImage+Gif.swift */; };
-		04CD994D239807470016E002 /* SCNNode+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9946239807470016E002 /* SCNNode+Size.swift */; };
-		04CD994E239807470016E002 /* ARHitTestResult+position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9947239807470016E002 /* ARHitTestResult+position.swift */; };
 		04CD9957239815860016E002 /* URLConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9951239815860016E002 /* URLConstructable.swift */; };
 		04CD9958239815860016E002 /* NetworkingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9952239815860016E002 /* NetworkingServer.swift */; };
 		04CD9959239815860016E002 /* RequestPerformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9953239815860016E002 /* RequestPerformable.swift */; };
@@ -63,9 +77,6 @@
 /* Begin PBXFileReference section */
 		040D59872397FDD5002B5FA4 /* FurnitureAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		040D598A2397FDD5002B5FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		040D598C2397FDD5002B5FA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		040D598E2397FDD5002B5FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		040D59912397FDD5002B5FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		040D59942397FDD5002B5FA4 /* FurnitureAR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FurnitureAR.xcdatamodel; sourceTree = "<group>"; };
 		040D59962397FDD6002B5FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040D59992397FDD6002B5FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,14 +87,31 @@
 		040D59AB2397FDD6002B5FA4 /* FurnitureARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurnitureARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040D59AF2397FDD6002B5FA4 /* FurnitureARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureARUITests.swift; sourceTree = "<group>"; };
 		040D59B12397FDD6002B5FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045E9433239ACBE4005441D6 /* Collection+HasElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+HasElements.swift"; sourceTree = "<group>"; };
+		045E9436239AD7CE005441D6 /* Float4x4+Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float4x4+Translation.swift"; sourceTree = "<group>"; };
+		045E9438239AD80C005441D6 /* CGPoint+Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Vector.swift"; sourceTree = "<group>"; };
+		045E943E239AD909005441D6 /* UIGestureRecognizer+Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Center.swift"; sourceTree = "<group>"; };
+		045E9442239ADAA1005441D6 /* Furniture.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Furniture.storyboard; sourceTree = "<group>"; };
+		045E9444239ADB5E005441D6 /* FurnitureListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureListViewController.swift; sourceTree = "<group>"; };
+		04A80AC22399B6D1005A36E3 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
+		04A80AC42399B76E005A36E3 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
+		04A80AC72399B7B8005A36E3 /* ARViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		04A80AC82399B7B8005A36E3 /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		04A80AC92399B7B8005A36E3 /* ARViewController+CoachingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+CoachingOverlay.swift"; sourceTree = "<group>"; };
+		04A80ACA2399B7B8005A36E3 /* ARViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+Actions.swift"; sourceTree = "<group>"; };
+		04A80ACB2399B7B8005A36E3 /* ARViewController+ObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+ObjectSelection.swift"; sourceTree = "<group>"; };
+		04A80ACC2399B7B9005A36E3 /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
+		04A80ACD2399B7B9005A36E3 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		04A80ACE2399B7B9005A36E3 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
+		04A80AFD2399BAAA005A36E3 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		04A80AFE2399BAAA005A36E3 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		04A80B012399BAB0005A36E3 /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
+		04A80B022399BAB0005A36E3 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		04A80B062399BAB6005A36E3 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		04A80B092399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+RetrievingVCs.swift"; sourceTree = "<group>"; };
+		04A80B0B2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+InstantiateViewController.swift"; sourceTree = "<group>"; };
 		04CD993F239807310016E002 /* String+ApproximateWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ApproximateWidth.swift"; sourceTree = "<group>"; };
-		04CD9941239807470016E002 /* SCNNode+selectAreaGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+selectAreaGeometry.swift"; sourceTree = "<group>"; };
-		04CD9942239807470016E002 /* ARPlaneAnchor+position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARPlaneAnchor+position.swift"; sourceTree = "<group>"; };
-		04CD9943239807470016E002 /* SCNNode+makeSelectArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+makeSelectArea.swift"; sourceTree = "<group>"; };
-		04CD9944239807470016E002 /* SCNNode+makePlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+makePlane.swift"; sourceTree = "<group>"; };
 		04CD9945239807470016E002 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
-		04CD9946239807470016E002 /* SCNNode+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Size.swift"; sourceTree = "<group>"; };
-		04CD9947239807470016E002 /* ARHitTestResult+position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARHitTestResult+position.swift"; sourceTree = "<group>"; };
 		04CD9951239815860016E002 /* URLConstructable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstructable.swift; sourceTree = "<group>"; };
 		04CD9952239815860016E002 /* NetworkingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServer.swift; sourceTree = "<group>"; };
 		04CD9953239815860016E002 /* RequestPerformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPerformable.swift; sourceTree = "<group>"; };
@@ -163,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				040D59BD2397FE43002B5FA4 /* Flow */,
+				045E9435239AD77B005441D6 /* UI */,
 				040D59BE2397FE4D002B5FA4 /* Core */,
 				040D59BF2397FE70002B5FA4 /* Resources */,
 			);
@@ -190,8 +219,8 @@
 		040D59BD2397FE43002B5FA4 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				040D598E2397FDD5002B5FA4 /* ViewController.swift */,
-				040D59902397FDD5002B5FA4 /* Main.storyboard */,
+				045E9441239ADA1D005441D6 /* Furniture */,
+				04A80AC62399B7A9005A36E3 /* AR */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -200,9 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				040D598A2397FDD5002B5FA4 /* AppDelegate.swift */,
-				040D598C2397FDD5002B5FA4 /* SceneDelegate.swift */,
-				04CD995F239818740016E002 /* Helper */,
-				04CD993E239806B70016E002 /* Extension */,
+				04CD995F239818740016E002 /* Helpers */,
+				04CD993E239806B70016E002 /* Extensions */,
 				04CD9950239815760016E002 /* Networking */,
 			);
 			path = Core;
@@ -211,6 +239,7 @@
 		040D59BF2397FE70002B5FA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04A80AC22399B6D1005A36E3 /* Models.scnassets */,
 				040D59962397FDD6002B5FA4 /* Assets.xcassets */,
 				040D59982397FDD6002B5FA4 /* LaunchScreen.storyboard */,
 				040D599B2397FDD6002B5FA4 /* Info.plist */,
@@ -220,19 +249,103 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		04CD993E239806B70016E002 /* Extension */ = {
+		045E9435239AD77B005441D6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				04A80AC82399B7B8005A36E3 /* ThresholdPanGesture.swift */,
+				045E943B239AD84D005441D6 /* AR */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		045E943A239AD83D005441D6 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				045E9438239AD80C005441D6 /* CGPoint+Vector.swift */,
+				045E9436239AD7CE005441D6 /* Float4x4+Translation.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		045E943B239AD84D005441D6 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				04A80ACC2399B7B9005A36E3 /* VirtualObjectARView.swift */,
+				04A80AFB2399BA8C005A36E3 /* FocusSquare */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		045E943C239AD86C005441D6 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
 				04CD993F239807310016E002 /* String+ApproximateWidth.swift */,
-				04CD9947239807470016E002 /* ARHitTestResult+position.swift */,
-				04CD9942239807470016E002 /* ARPlaneAnchor+position.swift */,
-				04CD9944239807470016E002 /* SCNNode+makePlane.swift */,
-				04CD9943239807470016E002 /* SCNNode+makeSelectArea.swift */,
-				04CD9941239807470016E002 /* SCNNode+selectAreaGeometry.swift */,
-				04CD9946239807470016E002 /* SCNNode+Size.swift */,
+				045E9433239ACBE4005441D6 /* Collection+HasElements.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		045E943D239AD87A005441D6 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				04A80B092399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift */,
+				04A80B0B2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift */,
+				045E943E239AD909005441D6 /* UIGestureRecognizer+Center.swift */,
 				04CD9945239807470016E002 /* UIImage+Gif.swift */,
 			);
-			path = Extension;
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		045E9441239ADA1D005441D6 /* Furniture */ = {
+			isa = PBXGroup;
+			children = (
+				045E9442239ADAA1005441D6 /* Furniture.storyboard */,
+				045E9444239ADB5E005441D6 /* FurnitureListViewController.swift */,
+			);
+			path = Furniture;
+			sourceTree = "<group>";
+		};
+		04A80AC62399B7A9005A36E3 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				04A80AC42399B76E005A36E3 /* AR.storyboard */,
+				04A80ACD2399B7B9005A36E3 /* ARViewController.swift */,
+				04A80ACA2399B7B8005A36E3 /* ARViewController+Actions.swift */,
+				04A80AC72399B7B8005A36E3 /* ARViewController+ARSCNViewDelegate.swift */,
+				04A80AC92399B7B8005A36E3 /* ARViewController+CoachingOverlay.swift */,
+				04A80ACB2399B7B8005A36E3 /* ARViewController+ObjectSelection.swift */,
+				04A80B062399BAB6005A36E3 /* StatusViewController.swift */,
+				04A80ACE2399B7B9005A36E3 /* VirtualObjectInteraction.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		04A80AFB2399BA8C005A36E3 /* FocusSquare */ = {
+			isa = PBXGroup;
+			children = (
+				04A80AFE2399BAAA005A36E3 /* FocusSquare.swift */,
+				04A80AFD2399BAAA005A36E3 /* FocusSquareSegment.swift */,
+			);
+			path = FocusSquare;
+			sourceTree = "<group>";
+		};
+		04A80AFC2399BA8E005A36E3 /* VirtualObjects */ = {
+			isa = PBXGroup;
+			children = (
+				04A80B022399BAB0005A36E3 /* VirtualObject.swift */,
+				04A80B012399BAB0005A36E3 /* VirtualObjectLoader.swift */,
+			);
+			path = VirtualObjects;
+			sourceTree = "<group>";
+		};
+		04CD993E239806B70016E002 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				045E943A239AD83D005441D6 /* AR */,
+				045E943D239AD87A005441D6 /* UIKit */,
+				045E943C239AD86C005441D6 /* Foundation */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		04CD9950239815760016E002 /* Networking */ = {
@@ -249,13 +362,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		04CD995F239818740016E002 /* Helper */ = {
+		04CD995F239818740016E002 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				04CD9970239861400016E002 /* Image.swift */,
+				04A80AFC2399BA8E005A36E3 /* VirtualObjects */,
 				04CD99602398188B0016E002 /* Layout */,
 			);
-			path = Helper;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		04CD99602398188B0016E002 /* Layout */ = {
@@ -411,9 +525,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				040D599A2397FDD6002B5FA4 /* LaunchScreen.storyboard in Resources */,
+				045E9443239ADAA1005441D6 /* Furniture.storyboard in Resources */,
 				04CD996F23985F010016E002 /* GoogleService-Info.plist in Resources */,
 				040D59972397FDD6002B5FA4 /* Assets.xcassets in Resources */,
-				040D59922397FDD5002B5FA4 /* Main.storyboard in Resources */,
+				04A80AC32399B6D1005A36E3 /* Models.scnassets in Resources */,
+				04A80AC52399B76E005A36E3 /* AR.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,31 +657,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CD9948239807470016E002 /* SCNNode+selectAreaGeometry.swift in Sources */,
+				045E9437239AD7CE005441D6 /* Float4x4+Translation.swift in Sources */,
 				04CD99662398188B0016E002 /* Helpers.swift in Sources */,
+				045E9439239AD80C005441D6 /* CGPoint+Vector.swift in Sources */,
 				04CD9959239815860016E002 /* RequestPerformable.swift in Sources */,
-				040D598F2397FDD5002B5FA4 /* ViewController.swift in Sources */,
 				04CD996B239819620016E002 /* HTTPURLResponse+IsStatusCodeInOkRange.swift in Sources */,
-				04CD9949239807470016E002 /* ARPlaneAnchor+position.swift in Sources */,
+				04A80AD62399B7B9005A36E3 /* VirtualObjectInteraction.swift in Sources */,
+				04A80ACF2399B7B9005A36E3 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
+				045E9434239ACBE4005441D6 /* Collection+HasElements.swift in Sources */,
+				045E943F239AD909005441D6 /* UIGestureRecognizer+Center.swift in Sources */,
+				04A80B042399BAB0005A36E3 /* VirtualObject.swift in Sources */,
+				04A80B0A2399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift in Sources */,
 				04CD995C239815860016E002 /* NetworkingError.swift in Sources */,
-				04CD994A239807470016E002 /* SCNNode+makeSelectArea.swift in Sources */,
 				04CD99652398188B0016E002 /* Anchor.swift in Sources */,
 				040D598B2397FDD5002B5FA4 /* AppDelegate.swift in Sources */,
+				04A80AD22399B7B9005A36E3 /* ARViewController+Actions.swift in Sources */,
 				04CD9940239807310016E002 /* String+ApproximateWidth.swift in Sources */,
+				04A80AD42399B7B9005A36E3 /* VirtualObjectARView.swift in Sources */,
+				04A80AD52399B7B9005A36E3 /* ARViewController.swift in Sources */,
 				04CD99682398188B0016E002 /* Layout.swift in Sources */,
 				04CD99672398188B0016E002 /* LayoutEnums.swift in Sources */,
-				040D598D2397FDD5002B5FA4 /* SceneDelegate.swift in Sources */,
-				04CD994D239807470016E002 /* SCNNode+Size.swift in Sources */,
+				04A80B082399BAB6005A36E3 /* StatusViewController.swift in Sources */,
+				04A80B032399BAB0005A36E3 /* VirtualObjectLoader.swift in Sources */,
+				045E9445239ADB5E005441D6 /* FurnitureListViewController.swift in Sources */,
+				04A80AD02399B7B9005A36E3 /* ThresholdPanGesture.swift in Sources */,
+				04A80AD32399B7B9005A36E3 /* ARViewController+ObjectSelection.swift in Sources */,
 				04CD9958239815860016E002 /* NetworkingServer.swift in Sources */,
 				04CD9957239815860016E002 /* URLConstructable.swift in Sources */,
 				04CD996C239819620016E002 /* URLRequest+HTTPMethod.swift in Sources */,
 				04CD9971239861400016E002 /* Image.swift in Sources */,
-				04CD994E239807470016E002 /* ARHitTestResult+position.swift in Sources */,
 				04CD995B239815860016E002 /* HTTPMethod.swift in Sources */,
 				04CD995A239815860016E002 /* NetworkingConfigurations.swift in Sources */,
+				04A80B002399BAAA005A36E3 /* FocusSquare.swift in Sources */,
+				04A80AFF2399BAAA005A36E3 /* FocusSquareSegment.swift in Sources */,
 				040D59952397FDD5002B5FA4 /* FurnitureAR.xcdatamodeld in Sources */,
 				04CD994C239807470016E002 /* UIImage+Gif.swift in Sources */,
-				04CD994B239807470016E002 /* SCNNode+makePlane.swift in Sources */,
+				04A80AD12399B7B9005A36E3 /* ARViewController+CoachingOverlay.swift in Sources */,
+				04A80B0C2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,14 +729,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		040D59902397FDD5002B5FA4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				040D59912397FDD5002B5FA4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		040D59982397FDD6002B5FA4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
