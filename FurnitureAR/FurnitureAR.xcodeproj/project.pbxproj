@@ -22,6 +22,10 @@
 		045E9448239AE3B3005441D6 /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9447239AE3B3005441D6 /* Firestore.swift */; };
 		045E944B239AE496005441D6 /* FurnitureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E944A239AE496005441D6 /* FurnitureService.swift */; };
 		045E944D239AEE19005441D6 /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E944C239AEE19005441D6 /* Furniture.swift */; };
+		045E944F239AF2AC005441D6 /* FurnitureListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E944E239AF2AC005441D6 /* FurnitureListTableView.swift */; };
+		045E9453239AF4AB005441D6 /* CellReuseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9452239AF4AB005441D6 /* CellReuseHelper.swift */; };
+		045E9455239AF4B4005441D6 /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9454239AF4B4005441D6 /* LoadingImageView.swift */; };
+		045E9457239AF7DA005441D6 /* Array+LastElementIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9456239AF7DA005441D6 /* Array+LastElementIndex.swift */; };
 		04A80AC32399B6D1005A36E3 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A80AC22399B6D1005A36E3 /* Models.scnassets */; };
 		04A80AC52399B76E005A36E3 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A80AC42399B76E005A36E3 /* AR.storyboard */; };
 		04A80ACF2399B7B9005A36E3 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80AC72399B7B8005A36E3 /* ARViewController+ARSCNViewDelegate.swift */; };
@@ -99,6 +103,10 @@
 		045E9447239AE3B3005441D6 /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		045E944A239AE496005441D6 /* FurnitureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureService.swift; sourceTree = "<group>"; };
 		045E944C239AEE19005441D6 /* Furniture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture.swift; sourceTree = "<group>"; };
+		045E944E239AF2AC005441D6 /* FurnitureListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureListTableView.swift; sourceTree = "<group>"; };
+		045E9452239AF4AB005441D6 /* CellReuseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellReuseHelper.swift; sourceTree = "<group>"; };
+		045E9454239AF4B4005441D6 /* LoadingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
+		045E9456239AF7DA005441D6 /* Array+LastElementIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+LastElementIndex.swift"; sourceTree = "<group>"; };
 		04A80AC22399B6D1005A36E3 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		04A80AC42399B76E005A36E3 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		04A80AC72399B7B8005A36E3 /* ARViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
@@ -259,6 +267,7 @@
 		045E9435239AD77B005441D6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				045E9454239AF4B4005441D6 /* LoadingImageView.swift */,
 				04A80AC82399B7B8005A36E3 /* ThresholdPanGesture.swift */,
 				045E943B239AD84D005441D6 /* AR */,
 			);
@@ -288,6 +297,7 @@
 			children = (
 				04CD993F239807310016E002 /* String+ApproximateWidth.swift */,
 				045E9433239ACBE4005441D6 /* Collection+HasElements.swift */,
+				045E9456239AF7DA005441D6 /* Array+LastElementIndex.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -308,6 +318,7 @@
 			children = (
 				045E9442239ADAA1005441D6 /* Furniture.storyboard */,
 				045E9444239ADB5E005441D6 /* FurnitureListViewController.swift */,
+				045E944E239AF2AC005441D6 /* FurnitureListTableView.swift */,
 				045E944C239AEE19005441D6 /* Furniture.swift */,
 			);
 			path = Furniture;
@@ -390,6 +401,7 @@
 		04CD995F239818740016E002 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				045E9452239AF4AB005441D6 /* CellReuseHelper.swift */,
 				04CD9970239861400016E002 /* Image.swift */,
 				04A80AFC2399BA8E005A36E3 /* VirtualObjects */,
 				04CD99602398188B0016E002 /* Layout */,
@@ -683,6 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045E9437239AD7CE005441D6 /* Float4x4+Translation.swift in Sources */,
+				045E944F239AF2AC005441D6 /* FurnitureListTableView.swift in Sources */,
 				04CD99662398188B0016E002 /* Helpers.swift in Sources */,
 				045E9439239AD80C005441D6 /* CGPoint+Vector.swift in Sources */,
 				04CD9959239815860016E002 /* RequestPerformable.swift in Sources */,
@@ -699,6 +712,7 @@
 				045E944B239AE496005441D6 /* FurnitureService.swift in Sources */,
 				040D598B2397FDD5002B5FA4 /* AppDelegate.swift in Sources */,
 				04A80AD22399B7B9005A36E3 /* ARViewController+Actions.swift in Sources */,
+				045E9453239AF4AB005441D6 /* CellReuseHelper.swift in Sources */,
 				04CD9940239807310016E002 /* String+ApproximateWidth.swift in Sources */,
 				04A80AD42399B7B9005A36E3 /* VirtualObjectARView.swift in Sources */,
 				04A80AD52399B7B9005A36E3 /* ARViewController.swift in Sources */,
@@ -717,11 +731,13 @@
 				04CD995B239815860016E002 /* HTTPMethod.swift in Sources */,
 				04CD995A239815860016E002 /* NetworkingConfigurations.swift in Sources */,
 				04A80B002399BAAA005A36E3 /* FocusSquare.swift in Sources */,
+				045E9455239AF4B4005441D6 /* LoadingImageView.swift in Sources */,
 				04A80AFF2399BAAA005A36E3 /* FocusSquareSegment.swift in Sources */,
 				040D59952397FDD5002B5FA4 /* FurnitureAR.xcdatamodeld in Sources */,
 				04CD994C239807470016E002 /* UIImage+Gif.swift in Sources */,
 				04A80AD12399B7B9005A36E3 /* ARViewController+CoachingOverlay.swift in Sources */,
 				04A80B0C2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift in Sources */,
+				045E9457239AF7DA005441D6 /* Array+LastElementIndex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
