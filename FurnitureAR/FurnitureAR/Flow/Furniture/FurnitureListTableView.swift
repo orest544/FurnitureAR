@@ -29,20 +29,12 @@ class FurnitureListTableView: UITableView {
     private func configureTableView() {
         dataSource = self
         delegate = self
-        
-        rowHeight = UITableView.automaticDimension
-        estimatedRowHeight = 100
-        
+
+        rowHeight = 300
         separatorStyle = .none
     }
     
-    func insertNewFurnitures(_ newFurnitures: [Furniture]) {
-        if furnitures.isEmpty {
-            furnitures = newFurnitures
-            reloadData()
-            return
-        }
-        
+    func insertNewFurnitures(_ newFurnitures: [Furniture]) {        
         let filteredNewFurnitures = newFurnitures.filter { !isFurnitureAlreadyExist($0) }
         addToFurnituresList(filteredNewFurnitures)
     }
@@ -62,7 +54,7 @@ class FurnitureListTableView: UITableView {
         
         performBatchUpdates({
             self.insertRows(at: insertedFurnituresIndexPaths,
-                            with: .fade)
+                            with: .right)
         }, completion: nil)
     }
     
@@ -77,8 +69,9 @@ extension FurnitureListTableView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Template
-        return UITableViewCell()
+        let cell: FurnitureTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.viewModel = furnitures[indexPath.row]
+        return cell
     }
 }
 

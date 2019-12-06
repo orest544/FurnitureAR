@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FurnitureTableViewCell" rowHeight="290" id="mdi-fO-pX0" customClass="FurnitureTableViewCell" customModule="FurnitureAR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="290"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mdi-fO-pX0" id="48s-ic-Tu7">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="290"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-HZ-dvn">
+                        <rect key="frame" x="20" y="11" width="338" height="268"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qPU-re-1uc" customClass="LoadingImageView" customModule="FurnitureAR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="268"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE4-6i-hXA">
+                                <rect key="frame" x="12" y="12" width="93" height="42.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBh-0V-iYf">
+                                <rect key="frame" x="12" y="242" width="314" height="14"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qct-VY-fKH">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-Yd-Rzw">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="bNd-Yd-Rzw" secondAttribute="bottom" id="7cw-pu-djW"/>
+                                        <constraint firstItem="bNd-Yd-Rzw" firstAttribute="top" secondItem="Qct-VY-fKH" secondAttribute="top" id="UEP-cC-Tdy"/>
+                                        <constraint firstAttribute="trailing" secondItem="bNd-Yd-Rzw" secondAttribute="trailing" id="Vh0-fN-HE3"/>
+                                        <constraint firstItem="bNd-Yd-Rzw" firstAttribute="leading" secondItem="Qct-VY-fKH" secondAttribute="leading" id="kye-W0-8Gr"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hE4-6i-hXA" firstAttribute="top" secondItem="Wm0-HZ-dvn" secondAttribute="top" constant="12" id="5hA-3s-qwj"/>
+                            <constraint firstAttribute="bottom" secondItem="hBh-0V-iYf" secondAttribute="bottom" constant="12" id="SF9-7K-pPI"/>
+                            <constraint firstItem="qPU-re-1uc" firstAttribute="top" secondItem="Wm0-HZ-dvn" secondAttribute="top" id="Yff-i9-BTG"/>
+                            <constraint firstItem="qPU-re-1uc" firstAttribute="leading" secondItem="Wm0-HZ-dvn" secondAttribute="leading" id="ZOb-2b-MMa"/>
+                            <constraint firstAttribute="trailing" secondItem="qPU-re-1uc" secondAttribute="trailing" id="ZUf-M7-0bH"/>
+                            <constraint firstAttribute="bottom" secondItem="qPU-re-1uc" secondAttribute="bottom" id="ZtO-qh-8oZ"/>
+                            <constraint firstAttribute="trailing" secondItem="hBh-0V-iYf" secondAttribute="trailing" constant="12" id="kxi-Kh-HRa"/>
+                            <constraint firstItem="hE4-6i-hXA" firstAttribute="leading" secondItem="Wm0-HZ-dvn" secondAttribute="leading" constant="12" id="mYD-XP-byy"/>
+                            <constraint firstItem="hBh-0V-iYf" firstAttribute="leading" secondItem="Wm0-HZ-dvn" secondAttribute="leading" constant="12" id="wbn-DG-Fe4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wm0-HZ-dvn" firstAttribute="top" secondItem="48s-ic-Tu7" secondAttribute="topMargin" id="T2I-P9-gac"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Wm0-HZ-dvn" secondAttribute="bottom" id="ZIW-cg-3FJ"/>
+                    <constraint firstItem="Wm0-HZ-dvn" firstAttribute="leading" secondItem="48s-ic-Tu7" secondAttribute="leadingMargin" id="bYA-DF-lDZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Wm0-HZ-dvn" secondAttribute="trailing" id="fyk-IE-QXl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backShadowView" destination="Wm0-HZ-dvn" id="aqr-z3-g9I"/>
+                <outlet property="backgroundImageView" destination="qPU-re-1uc" id="niV-cF-6wz"/>
+                <outlet property="descriptionLabel" destination="bNd-Yd-Rzw" id="5Ti-E7-ePM"/>
+                <outlet property="nameLabel" destination="hE4-6i-hXA" id="7IS-46-q5o"/>
+            </connections>
+            <point key="canvasLocation" x="-336.23188405797106" y="52.232142857142854"/>
+        </tableViewCell>
+    </objects>
+</document>

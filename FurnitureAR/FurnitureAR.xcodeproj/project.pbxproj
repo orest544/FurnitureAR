@@ -26,6 +26,8 @@
 		045E9453239AF4AB005441D6 /* CellReuseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9452239AF4AB005441D6 /* CellReuseHelper.swift */; };
 		045E9455239AF4B4005441D6 /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9454239AF4B4005441D6 /* LoadingImageView.swift */; };
 		045E9457239AF7DA005441D6 /* Array+LastElementIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9456239AF7DA005441D6 /* Array+LastElementIndex.swift */; };
+		045E9459239AFB07005441D6 /* FurnitureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E9458239AFB07005441D6 /* FurnitureTableViewCell.swift */; };
+		045E945B239AFB16005441D6 /* FurnitureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045E945A239AFB16005441D6 /* FurnitureTableViewCell.xib */; };
 		04A80AC32399B6D1005A36E3 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A80AC22399B6D1005A36E3 /* Models.scnassets */; };
 		04A80AC52399B76E005A36E3 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A80AC42399B76E005A36E3 /* AR.storyboard */; };
 		04A80ACF2399B7B9005A36E3 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80AC72399B7B8005A36E3 /* ARViewController+ARSCNViewDelegate.swift */; };
@@ -107,6 +109,8 @@
 		045E9452239AF4AB005441D6 /* CellReuseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellReuseHelper.swift; sourceTree = "<group>"; };
 		045E9454239AF4B4005441D6 /* LoadingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
 		045E9456239AF7DA005441D6 /* Array+LastElementIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+LastElementIndex.swift"; sourceTree = "<group>"; };
+		045E9458239AFB07005441D6 /* FurnitureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureTableViewCell.swift; sourceTree = "<group>"; };
+		045E945A239AFB16005441D6 /* FurnitureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurnitureTableViewCell.xib; sourceTree = "<group>"; };
 		04A80AC22399B6D1005A36E3 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		04A80AC42399B76E005A36E3 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		04A80AC72399B7B8005A36E3 /* ARViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
@@ -319,6 +323,8 @@
 				045E9442239ADAA1005441D6 /* Furniture.storyboard */,
 				045E9444239ADB5E005441D6 /* FurnitureListViewController.swift */,
 				045E944E239AF2AC005441D6 /* FurnitureListTableView.swift */,
+				045E945A239AFB16005441D6 /* FurnitureTableViewCell.xib */,
+				045E9458239AFB07005441D6 /* FurnitureTableViewCell.swift */,
 				045E944C239AEE19005441D6 /* Furniture.swift */,
 			);
 			path = Furniture;
@@ -563,6 +569,7 @@
 			files = (
 				040D599A2397FDD6002B5FA4 /* LaunchScreen.storyboard in Resources */,
 				045E9443239ADAA1005441D6 /* Furniture.storyboard in Resources */,
+				045E945B239AFB16005441D6 /* FurnitureTableViewCell.xib in Resources */,
 				04CD996F23985F010016E002 /* GoogleService-Info.plist in Resources */,
 				040D59972397FDD6002B5FA4 /* Assets.xcassets in Resources */,
 				04A80AC32399B6D1005A36E3 /* Models.scnassets in Resources */,
@@ -708,6 +715,7 @@
 				04A80B042399BAB0005A36E3 /* VirtualObject.swift in Sources */,
 				04A80B0A2399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift in Sources */,
 				04CD995C239815860016E002 /* NetworkingError.swift in Sources */,
+				045E9459239AFB07005441D6 /* FurnitureTableViewCell.swift in Sources */,
 				04CD99652398188B0016E002 /* Anchor.swift in Sources */,
 				045E944B239AE496005441D6 /* FurnitureService.swift in Sources */,
 				040D598B2397FDD5002B5FA4 /* AppDelegate.swift in Sources */,

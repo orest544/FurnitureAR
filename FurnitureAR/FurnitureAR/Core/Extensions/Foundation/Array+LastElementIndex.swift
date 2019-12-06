@@ -10,7 +10,7 @@ import Foundation
 
 extension Array {
     var lastElementIndex: Int? {
-        guard hasElements else { return nil }
+        guard hasElements else { return 0 }
         return count - 1
     }
 }

@@ -27,7 +27,7 @@ class LoadingImageView: UIImageView {
                     return
             }
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.async(group: nil, qos: .userInteractive, flags: .barrier) {
                 if self.imageUrlString == imageUrlString {
                     self.image = downloadedImage
                 }

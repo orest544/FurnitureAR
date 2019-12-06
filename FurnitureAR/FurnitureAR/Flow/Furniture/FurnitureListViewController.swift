@@ -10,16 +10,20 @@ import UIKit
 
 class FurnitureListViewController: UIViewController {
     
+    @IBOutlet weak var furnitureListTableView: FurnitureListTableView!
+    
     private let furnitureService = FurnitureService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        furnitureService.retrieveAll { result in
+        furnitureService.retrieveAll { [weak self] result in
             switch result {
             case .success(let furnitures):
                 print("Success!\n", furnitures)
-            
+                DispatchQueue.main.async {
+                    self?.furnitureListTableView.insertNewFurnitures(furnitures)
+                }
             case .failure(let error):
                 let errorWithInfo = error as NSError
                 let messages = [

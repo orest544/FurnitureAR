@@ -7,17 +7,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Furniture List View Controller-->
+        <!--Каталог-->
         <scene sceneID="vUh-ye-LdL">
             <objects>
                 <viewController storyboardIdentifier="FurnitureListViewController" id="7we-6T-uxa" customClass="FurnitureListViewController" customModule="FurnitureAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="huJ-Ya-ca8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DfP-sk-q8u" customClass="FurnitureListTableView" customModule="FurnitureAR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DfP-sk-q8u" secondAttribute="bottom" id="BzC-kG-5x4"/>
+                            <constraint firstItem="DfP-sk-q8u" firstAttribute="leading" secondItem="f14-by-XfR" secondAttribute="leading" id="TZh-Wi-Zdu"/>
+                            <constraint firstItem="f14-by-XfR" firstAttribute="trailing" secondItem="DfP-sk-q8u" secondAttribute="trailing" id="aMd-YQ-jZ6"/>
+                            <constraint firstItem="DfP-sk-q8u" firstAttribute="top" secondItem="f14-by-XfR" secondAttribute="top" id="rhZ-By-QjS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="f14-by-XfR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ba0-Zn-9qa"/>
+                    <navigationItem key="navigationItem" title="Каталог" id="ba0-Zn-9qa"/>
+                    <connections>
+                        <outlet property="furnitureListTableView" destination="DfP-sk-q8u" id="BCk-lR-veA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6X-6r-dtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,8 +43,8 @@
             <objects>
                 <navigationController storyboardIdentifier="FurnitureListNavigation" automaticallyAdjustsScrollViewInsets="NO" id="BeO-nc-Uqw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rCF-6N-OFG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rCF-6N-OFG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
