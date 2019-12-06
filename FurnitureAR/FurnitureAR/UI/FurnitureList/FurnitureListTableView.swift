@@ -8,21 +8,23 @@
 
 import UIKit
 
-class FurnitureListTableView: UITableView {
+protocol FurnitureListTableViewDelegate: AnyObject {
+    func furnitureListPulledRefresh(_ furnitureList: FurnitureListTableView)
+}
+
+final class FurnitureListTableView: UITableView {
+    
+    var furnitureListDelegate: FurnitureListTableViewDelegate?
     
     private var furnitures = [Furniture]()
     
     override init(frame: CGRect, style: UITableView.Style = .plain) {
         super.init(frame: frame, style: style)
-        commonInit()
+        configureTableView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
-    }
-    
-    private func commonInit() {
         configureTableView()
     }
     
@@ -32,9 +34,22 @@ class FurnitureListTableView: UITableView {
 
         rowHeight = 300
         separatorStyle = .none
+        
+        configureRefreshControl()
     }
     
-    func insertNewFurnitures(_ newFurnitures: [Furniture]) {        
+    private func configureRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshPulled), for: .valueChanged)
+    }
+    
+    @objc
+    private func refreshPulled(_ sender: UIRefreshControl) {
+        furnitureListDelegate?.furnitureListPulledRefresh(self)
+    }
+    
+    func insertNewFurnitures(_ newFurnitures: [Furniture]) {
+        refreshControl?.endRefreshing()
         let filteredNewFurnitures = newFurnitures.filter { !isFurnitureAlreadyExist($0) }
         addToFurnituresList(filteredNewFurnitures)
     }

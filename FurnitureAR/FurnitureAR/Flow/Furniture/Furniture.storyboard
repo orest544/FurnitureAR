@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DfP-sk-q8u" customClass="FurnitureListTableView" customModule="FurnitureAR" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -25,7 +25,7 @@
                             <constraint firstAttribute="bottom" secondItem="DfP-sk-q8u" secondAttribute="bottom" id="BzC-kG-5x4"/>
                             <constraint firstItem="DfP-sk-q8u" firstAttribute="leading" secondItem="f14-by-XfR" secondAttribute="leading" id="TZh-Wi-Zdu"/>
                             <constraint firstItem="f14-by-XfR" firstAttribute="trailing" secondItem="DfP-sk-q8u" secondAttribute="trailing" id="aMd-YQ-jZ6"/>
-                            <constraint firstItem="DfP-sk-q8u" firstAttribute="top" secondItem="f14-by-XfR" secondAttribute="top" id="rhZ-By-QjS"/>
+                            <constraint firstItem="DfP-sk-q8u" firstAttribute="top" secondItem="huJ-Ya-ca8" secondAttribute="top" id="rhZ-By-QjS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f14-by-XfR"/>
                     </view>

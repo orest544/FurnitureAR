@@ -273,6 +273,7 @@
 			children = (
 				045E9454239AF4B4005441D6 /* LoadingImageView.swift */,
 				04A80AC82399B7B8005A36E3 /* ThresholdPanGesture.swift */,
+				048BC1D4239B13A6003DAA2D /* FurnitureList */,
 				045E943B239AD84D005441D6 /* AR */,
 			);
 			path = UI;
@@ -322,10 +323,6 @@
 			children = (
 				045E9442239ADAA1005441D6 /* Furniture.storyboard */,
 				045E9444239ADB5E005441D6 /* FurnitureListViewController.swift */,
-				045E944E239AF2AC005441D6 /* FurnitureListTableView.swift */,
-				045E945A239AFB16005441D6 /* FurnitureTableViewCell.xib */,
-				045E9458239AFB07005441D6 /* FurnitureTableViewCell.swift */,
-				045E944C239AEE19005441D6 /* Furniture.swift */,
 			);
 			path = Furniture;
 			sourceTree = "<group>";
@@ -349,6 +346,25 @@
 				045E944A239AE496005441D6 /* FurnitureService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		048BC1D4239B13A6003DAA2D /* FurnitureList */ = {
+			isa = PBXGroup;
+			children = (
+				045E944E239AF2AC005441D6 /* FurnitureListTableView.swift */,
+				048BC1D5239B13C5003DAA2D /* Cell */,
+			);
+			path = FurnitureList;
+			sourceTree = "<group>";
+		};
+		048BC1D5239B13C5003DAA2D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				045E945A239AFB16005441D6 /* FurnitureTableViewCell.xib */,
+				045E9458239AFB07005441D6 /* FurnitureTableViewCell.swift */,
+				045E944C239AEE19005441D6 /* Furniture.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		04A80AC62399B7A9005A36E3 /* AR */ = {

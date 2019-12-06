@@ -16,6 +16,16 @@ class FurnitureListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        furnitureListTableView.furnitureListDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchFurnitures()
+    }
+    
+    private func fetchFurnitures() {
+        furnitureListTableView.refreshControl?.beginRefreshing()
         
         furnitureService.retrieveAll { [weak self] result in
             switch result {
@@ -36,5 +46,11 @@ class FurnitureListViewController: UIViewController {
                 print(errorMessage)
             }
         }
+    }
+}
+
+extension FurnitureListViewController: FurnitureListTableViewDelegate {
+    func furnitureListPulledRefresh(_ furnitureList: FurnitureListTableView) {
+        fetchFurnitures()
     }
 }
