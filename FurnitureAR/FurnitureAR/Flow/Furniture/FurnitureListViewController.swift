@@ -19,14 +19,12 @@ class FurnitureListViewController: UIViewController {
         furnitureListTableView.furnitureListDelegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         fetchFurnitures()
     }
     
     private func fetchFurnitures() {
-        furnitureListTableView.refreshControl?.beginRefreshing()
-        
         furnitureService.retrieveAll { [weak self] result in
             switch result {
             case .success(let furnitures):
@@ -47,10 +45,23 @@ class FurnitureListViewController: UIViewController {
             }
         }
     }
+    
+    private func openDetails(of furniture: Furniture) {
+        let furnitureDetailsViewController = UIStoryboard.Furniture.details
+        furnitureDetailsViewController.selectedFurniture = furniture
+
+        navigationController?.pushViewController(furnitureDetailsViewController,
+                                                 animated: true)
+    }
 }
 
 extension FurnitureListViewController: FurnitureListTableViewDelegate {
     func furnitureListPulledRefresh(_ furnitureList: FurnitureListTableView) {
         fetchFurnitures()
+    }
+    
+    func furnitureList(_ furnitureList: FurnitureListTableView,
+                       didSelectFurniture selectedFurniture: Furniture) {
+        openDetails(of: selectedFurniture)
     }
 }

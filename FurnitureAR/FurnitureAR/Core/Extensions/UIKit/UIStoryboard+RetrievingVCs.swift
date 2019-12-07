@@ -13,6 +13,9 @@ extension UIStoryboard {
         static var initial: UINavigationController {
             return Name.Furniture.instantiateInitialViewController() as! UINavigationController
         }
+        static var details: FurnitureDetailsViewController {
+            return Name.Furniture.instantiateViewController()
+        }
     }
     
     enum AR {
