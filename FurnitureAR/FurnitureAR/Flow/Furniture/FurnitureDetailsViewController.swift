@@ -12,10 +12,11 @@ class FurnitureDetailsViewController: UIViewController {
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var imageView: LoadingImageView!
-    @IBOutlet private weak var tryWithAugmentedRealityButton: UIButton!
+    @IBOutlet private weak var tryWithARButton: UIButton!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
     var selectedFurniture: Furniture?
+    var selectedFurnitureImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +27,27 @@ class FurnitureDetailsViewController: UIViewController {
         if let furniture = selectedFurniture {
             fillInfo(with: furniture)
         }
-        tryWithAugmentedRealityButton.layer.cornerRadius = 12
+        tryWithARButton.layer.cornerRadius = 12
     }
     
     private func fillInfo(with furniture: Furniture) {
-        imageView.loadImage(from: furniture.imageUrl.absoluteString)
+        if let furnitureImage = selectedFurnitureImage {
+            imageView.image = furnitureImage
+        } else {
+            imageView.loadImage(from: furniture.imageUrl.absoluteString)
+        }
         
         nameLabel.text = furniture.name
         descriptionLabel.text = furniture.description
+    }
+    
+    @IBAction private func tryWithAR(_ sender: UIButton) {
+        guard let furniture = selectedFurniture else {
+            return
+        }
+        let ARViewController = UIStoryboard.AR.initial
+        ARViewController.virtualObjectId = furniture.id
+        
+        present(ARViewController, animated: true)
     }
 }

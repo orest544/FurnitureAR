@@ -25,7 +25,11 @@ class StatusViewController: UIViewController {
 
     // MARK: - IBOutlets
 
-    @IBOutlet weak private var messagePanel: UIVisualEffectView!
+    @IBOutlet weak private var messagePanel: UIVisualEffectView! {
+        didSet {
+            messagePanel.layer.cornerRadius = 8
+        }
+    }
     @IBOutlet weak private var messageLabel: UILabel!
     @IBOutlet weak private var restartExperienceButton: UIButton!
 
@@ -140,7 +144,7 @@ extension ARCamera.TrackingState {
         case .limited(.insufficientFeatures):
             return "TRACKING LIMITED\nLow detail"
         case .limited(.initializing):
-            return "Initializing"
+            return "Ініціалізація"
         case .limited(.relocalizing):
             return "Recovering from interruption"
         @unknown default:

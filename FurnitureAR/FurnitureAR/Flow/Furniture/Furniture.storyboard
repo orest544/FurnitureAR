@@ -19,10 +19,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pb6-9e-Ww1">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="pb6-9e-Ww1" firstAttribute="centerY" secondItem="huJ-Ya-ca8" secondAttribute="centerY" id="3vY-Z2-78q"/>
                             <constraint firstAttribute="bottom" secondItem="DfP-sk-q8u" secondAttribute="bottom" id="BzC-kG-5x4"/>
+                            <constraint firstItem="pb6-9e-Ww1" firstAttribute="centerX" secondItem="huJ-Ya-ca8" secondAttribute="centerX" id="D9o-ku-BTt"/>
                             <constraint firstItem="DfP-sk-q8u" firstAttribute="leading" secondItem="f14-by-XfR" secondAttribute="leading" id="TZh-Wi-Zdu"/>
                             <constraint firstItem="f14-by-XfR" firstAttribute="trailing" secondItem="DfP-sk-q8u" secondAttribute="trailing" id="aMd-YQ-jZ6"/>
                             <constraint firstItem="DfP-sk-q8u" firstAttribute="top" secondItem="huJ-Ya-ca8" secondAttribute="top" id="rhZ-By-QjS"/>
@@ -31,6 +36,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Каталог" id="ba0-Zn-9qa"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="pb6-9e-Ww1" id="IzF-2d-NJg"/>
                         <outlet property="furnitureListTableView" destination="DfP-sk-q8u" id="BCk-lR-veA"/>
                     </connections>
                 </viewController>
@@ -96,6 +102,9 @@
                                                 <state key="normal" title="Переглянути у просторі">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tryWithAR:" destination="ISa-SR-aDb" eventType="touchUpInside" id="7Gu-kW-VfQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -140,7 +149,7 @@
                         <outlet property="descriptionLabel" destination="43k-4U-AHV" id="9h1-Au-dTk"/>
                         <outlet property="imageView" destination="WQ6-TG-yYj" id="Khv-Fb-LqL"/>
                         <outlet property="nameLabel" destination="bjq-E5-vka" id="KnV-U9-35c"/>
-                        <outlet property="tryWithAugmentedRealityButton" destination="Bhu-oB-Co5" id="ThK-eg-e1J"/>
+                        <outlet property="tryWithARButton" destination="Bhu-oB-Co5" id="ThK-eg-e1J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPo-XP-igp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

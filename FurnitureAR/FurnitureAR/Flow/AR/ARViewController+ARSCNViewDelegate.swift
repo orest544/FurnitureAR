@@ -16,9 +16,9 @@ extension ARViewController: ARSCNViewDelegate, ARSessionDelegate {
         guard anchor is ARPlaneAnchor else { return }
         DispatchQueue.main.async {
             self.statusViewController.cancelScheduledMessage(for: .planeEstimation)
-            self.statusViewController.showMessage("SURFACE DETECTED")
+            self.statusViewController.showMessage("Розпізнано поверхню")
             if self.virtualObjectLoader.loadedObjects.isEmpty {
-                self.statusViewController.scheduleMessage("TAP + TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .contentPlacement)
+                self.statusViewController.scheduleMessage("Нажміть \"+\" щоб добавити об'єкт", inSeconds: 7.5, messageType: .contentPlacement)
             }
         }
     }

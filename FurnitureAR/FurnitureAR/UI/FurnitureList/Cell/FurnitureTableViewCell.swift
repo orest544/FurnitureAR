@@ -26,6 +26,10 @@ final class FurnitureTableViewCell: UITableViewCell, NibLoadableView, ReusableVi
         }
     }
 
+    var furnitureImage: UIImage? {
+        return backgroundImageView.image
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureAppearence()

@@ -10,7 +10,9 @@ import UIKit
 
 protocol FurnitureListTableViewDelegate: AnyObject {
     func furnitureListPulledRefresh(_ furnitureList: FurnitureListTableView)
-    func furnitureList(_ furnitureList: FurnitureListTableView, didSelectFurniture selectedFurniture: Furniture)
+    func furnitureList(_ furnitureList: FurnitureListTableView,
+                       didSelectFurniture selectedFurniture: Furniture,
+                       withImage furnitureImage: UIImage?)
 }
 
 final class FurnitureListTableView: UITableView {
@@ -93,6 +95,9 @@ extension FurnitureListTableView: UITableViewDataSource {
 
 extension FurnitureListTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        furnitureListDelegate?.furnitureList(self, didSelectFurniture: furnitures[indexPath.row])
+        let selectedCell = tableView.cellForRow(at: indexPath) as? FurnitureTableViewCell
+        let selectedFurnitureImage = selectedCell?.furnitureImage
+        
+        furnitureListDelegate?.furnitureList(self, didSelectFurniture: furnitures[indexPath.row], withImage: selectedFurnitureImage)
     }
 }

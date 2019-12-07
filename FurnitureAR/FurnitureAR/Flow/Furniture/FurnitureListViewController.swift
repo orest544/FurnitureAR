@@ -11,6 +11,7 @@ import UIKit
 class FurnitureListViewController: UIViewController {
     
     @IBOutlet weak var furnitureListTableView: FurnitureListTableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let furnitureService = FurnitureService()
     
@@ -26,6 +27,9 @@ class FurnitureListViewController: UIViewController {
     
     private func fetchFurnitures() {
         furnitureService.retrieveAll { [weak self] result in
+            DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+            }
             switch result {
             case .success(let furnitures):
                 print("Success!\n", furnitures)
@@ -46,10 +50,11 @@ class FurnitureListViewController: UIViewController {
         }
     }
     
-    private func openDetails(of furniture: Furniture) {
+    private func openDetails(of furniture: Furniture, furnitureImage: UIImage?) {
         let furnitureDetailsViewController = UIStoryboard.Furniture.details
         furnitureDetailsViewController.selectedFurniture = furniture
-
+        furnitureDetailsViewController.selectedFurnitureImage = furnitureImage
+        
         navigationController?.pushViewController(furnitureDetailsViewController,
                                                  animated: true)
     }
@@ -61,7 +66,8 @@ extension FurnitureListViewController: FurnitureListTableViewDelegate {
     }
     
     func furnitureList(_ furnitureList: FurnitureListTableView,
-                       didSelectFurniture selectedFurniture: Furniture) {
-        openDetails(of: selectedFurniture)
+                       didSelectFurniture selectedFurniture: Furniture,
+                       withImage furnitureImage: UIImage?) {
+        openDetails(of: selectedFurniture, furnitureImage: furnitureImage)
     }
 }

@@ -65,7 +65,9 @@ class ARViewController: UIViewController {
 
         // Hook up status view controller callback(s).
         statusViewController.restartExperienceHandler = { [unowned self] in
-            self.restartExperience()
+            self.dismiss(animated: true)
+            
+            //self.restartExperience()
         }
     }
 
@@ -139,7 +141,7 @@ class ARViewController: UIViewController {
         
         session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
 
-        statusViewController.scheduleMessage("FIND A SURFACE TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .planeEstimation)
+        statusViewController.scheduleMessage("Знайдіть поверхню, щоб розмістити об'єкт", inSeconds: 7.5, messageType: .planeEstimation)
         setAddButtonImages()
     }
 
@@ -150,7 +152,7 @@ class ARViewController: UIViewController {
             focusSquare.hide()
         } else {
             focusSquare.unhide()
-            statusViewController.scheduleMessage("TRY MOVING LEFT OR RIGHT", inSeconds: 5.0, messageType: .focusSquare)
+            statusViewController.scheduleMessage("Спробуйте рухатися вліво і вправо", inSeconds: 5.0, messageType: .focusSquare)
         }
         
         // Perform ray casting only when ARKit tracking is in a good state.
