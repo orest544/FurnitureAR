@@ -8,12 +8,18 @@
 
 import UIKit
 
-class FurnitureListViewController: UIViewController {
+final class FurnitureListViewController: UIViewController {
     
-    @IBOutlet weak var furnitureListTableView: FurnitureListTableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    // MARK: IBOutlets
+    
+    @IBOutlet private weak var furnitureListTableView: FurnitureListTableView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    
+    // MARK: - Properties
     
     private let furnitureService = FurnitureService()
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +30,8 @@ class FurnitureListViewController: UIViewController {
         super.viewDidAppear(animated)
         fetchFurnitures()
     }
+    
+    // MARK: - Methods
     
     private func fetchFurnitures() {
         furnitureService.retrieveAll { [weak self] result in
@@ -36,17 +44,16 @@ class FurnitureListViewController: UIViewController {
                     self?.furnitureListTableView.insertNewFurnitures(furnitures)
                 }
             case .failure(let error):
-                let errorWithInfo = error as NSError
-                let messages = [
-                    errorWithInfo.localizedDescription,
-                    errorWithInfo.localizedFailureReason,
-                    errorWithInfo.localizedRecoverySuggestion
-                ]
-                
-                let errorMessage = messages.compactMap({ $0 }).joined(separator: "\n")
-                print(errorMessage)
+                DispatchQueue.main.async {
+                    self?.showErrorMessage(error.message)
+                }
             }
         }
+    }
+    
+    private func showErrorMessage(_ message: String) {
+        let messageController = NativeAlertProvider.networkingProblems(message)
+        present(messageController, animated: true)
     }
     
     private func openDetails(of furniture: Furniture, furnitureImage: UIImage?) {
@@ -59,6 +66,7 @@ class FurnitureListViewController: UIViewController {
     }
 }
 
+// MARK: - FurnitureListTableViewDelegate
 extension FurnitureListViewController: FurnitureListTableViewDelegate {
     func furnitureListPulledRefresh(_ furnitureList: FurnitureListTableView) {
         fetchFurnitures()

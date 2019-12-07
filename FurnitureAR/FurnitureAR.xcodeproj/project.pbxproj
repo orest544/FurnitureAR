@@ -46,6 +46,8 @@
 		04A80B082399BAB6005A36E3 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B062399BAB6005A36E3 /* StatusViewController.swift */; };
 		04A80B0A2399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B092399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift */; };
 		04A80B0C2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A80B0B2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift */; };
+		04AEC656239C282900C3FE28 /* NativeAlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEC655239C282900C3FE28 /* NativeAlertProvider.swift */; };
+		04AEC658239C295300C3FE28 /* Error+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEC657239C295300C3FE28 /* Error+Message.swift */; };
 		04CD9940239807310016E002 /* String+ApproximateWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD993F239807310016E002 /* String+ApproximateWidth.swift */; };
 		04CD994C239807470016E002 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9945239807470016E002 /* UIImage+Gif.swift */; };
 		04CD9957239815860016E002 /* URLConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9951239815860016E002 /* URLConstructable.swift */; };
@@ -61,7 +63,7 @@
 		04CD996B239819620016E002 /* HTTPURLResponse+IsStatusCodeInOkRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9969239819620016E002 /* HTTPURLResponse+IsStatusCodeInOkRange.swift */; };
 		04CD996C239819620016E002 /* URLRequest+HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD996A239819620016E002 /* URLRequest+HTTPMethod.swift */; };
 		04CD996F23985F010016E002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CD996E23985F010016E002 /* GoogleService-Info.plist */; };
-		04CD9971239861400016E002 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9970239861400016E002 /* Image.swift */; };
+		04CD9971239861400016E002 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9970239861400016E002 /* ImageProvider.swift */; };
 		8A84F2778C4B633556DA5E28 /* Pods_FurnitureARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AEA2AFAAD30DC8981EC8D1 /* Pods_FurnitureARTests.framework */; };
 		AA2503F35083805B11F059D3 /* Pods_FurnitureAR_FurnitureARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD753E175E06B3E60AF7A74 /* Pods_FurnitureAR_FurnitureARUITests.framework */; };
 		DDC2F99185F13CCE9E3F445C /* Pods_FurnitureAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D913F3E2D22BD6E7F3CFF97F /* Pods_FurnitureAR.framework */; };
@@ -130,6 +132,8 @@
 		04A80B062399BAB6005A36E3 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		04A80B092399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+RetrievingVCs.swift"; sourceTree = "<group>"; };
 		04A80B0B2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+InstantiateViewController.swift"; sourceTree = "<group>"; };
+		04AEC655239C282900C3FE28 /* NativeAlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAlertProvider.swift; sourceTree = "<group>"; };
+		04AEC657239C295300C3FE28 /* Error+Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Message.swift"; sourceTree = "<group>"; };
 		04CD993F239807310016E002 /* String+ApproximateWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ApproximateWidth.swift"; sourceTree = "<group>"; };
 		04CD9945239807470016E002 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		04CD9951239815860016E002 /* URLConstructable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstructable.swift; sourceTree = "<group>"; };
@@ -145,7 +149,7 @@
 		04CD9969239819620016E002 /* HTTPURLResponse+IsStatusCodeInOkRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+IsStatusCodeInOkRange.swift"; sourceTree = "<group>"; };
 		04CD996A239819620016E002 /* URLRequest+HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+HTTPMethod.swift"; sourceTree = "<group>"; };
 		04CD996E23985F010016E002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		04CD9970239861400016E002 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		04CD9970239861400016E002 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		2AD753E175E06B3E60AF7A74 /* Pods_FurnitureAR_FurnitureARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureAR_FurnitureARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33822514748E7F845F53B7C8 /* Pods-FurnitureARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureARTests.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureARTests/Pods-FurnitureARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3843495668B2E421D87CB7B2 /* Pods-FurnitureAR-FurnitureARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureAR-FurnitureARUITests.release.xcconfig"; path = "Target Support Files/Pods-FurnitureAR-FurnitureARUITests/Pods-FurnitureAR-FurnitureARUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				040D598A2397FDD5002B5FA4 /* AppDelegate.swift */,
+				04AEC654239C280000C3FE28 /* Providers */,
 				045E9449239AE45A005441D6 /* Services */,
 				04CD995F239818740016E002 /* Helpers */,
 				04CD993E239806B70016E002 /* Extensions */,
@@ -305,6 +310,7 @@
 				04CD993F239807310016E002 /* String+ApproximateWidth.swift */,
 				045E9433239ACBE4005441D6 /* Collection+HasElements.swift */,
 				045E9456239AF7DA005441D6 /* Array+LastElementIndex.swift */,
+				04AEC657239C295300C3FE28 /* Error+Message.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -403,6 +409,15 @@
 			path = VirtualObjects;
 			sourceTree = "<group>";
 		};
+		04AEC654239C280000C3FE28 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				04CD9970239861400016E002 /* ImageProvider.swift */,
+				04AEC655239C282900C3FE28 /* NativeAlertProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		04CD993E239806B70016E002 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,7 +442,6 @@
 			isa = PBXGroup;
 			children = (
 				045E9452239AF4AB005441D6 /* CellReuseHelper.swift */,
-				04CD9970239861400016E002 /* Image.swift */,
 				04A80AFC2399BA8E005A36E3 /* VirtualObjects */,
 				04CD99602398188B0016E002 /* Layout */,
 			);
@@ -735,6 +749,7 @@
 				04A80B0A2399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift in Sources */,
 				04CD995C239815860016E002 /* NetworkingError.swift in Sources */,
 				045E9459239AFB07005441D6 /* FurnitureTableViewCell.swift in Sources */,
+				04AEC656239C282900C3FE28 /* NativeAlertProvider.swift in Sources */,
 				04CD99652398188B0016E002 /* Anchor.swift in Sources */,
 				048BC1D7239B1A8A003DAA2D /* FurnitureDetailsViewController.swift in Sources */,
 				045E944B239AE496005441D6 /* FurnitureService.swift in Sources */,
@@ -743,6 +758,7 @@
 				045E9453239AF4AB005441D6 /* CellReuseHelper.swift in Sources */,
 				04CD9940239807310016E002 /* String+ApproximateWidth.swift in Sources */,
 				04A80AD42399B7B9005A36E3 /* VirtualObjectARView.swift in Sources */,
+				04AEC658239C295300C3FE28 /* Error+Message.swift in Sources */,
 				04A80AD52399B7B9005A36E3 /* ARViewController.swift in Sources */,
 				04CD99682398188B0016E002 /* Layout.swift in Sources */,
 				04CD99672398188B0016E002 /* LayoutEnums.swift in Sources */,
@@ -755,7 +771,7 @@
 				04CD9958239815860016E002 /* NetworkingServer.swift in Sources */,
 				04CD9957239815860016E002 /* URLConstructable.swift in Sources */,
 				04CD996C239819620016E002 /* URLRequest+HTTPMethod.swift in Sources */,
-				04CD9971239861400016E002 /* Image.swift in Sources */,
+				04CD9971239861400016E002 /* ImageProvider.swift in Sources */,
 				04CD995B239815860016E002 /* HTTPMethod.swift in Sources */,
 				04CD995A239815860016E002 /* NetworkingConfigurations.swift in Sources */,
 				04A80B002399BAAA005A36E3 /* FocusSquare.swift in Sources */,
