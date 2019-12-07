@@ -1,6 +1,5 @@
 //
-//  CachingImageView.swift
-//  NERVY
+//  DownloadingImageView.swift
 //
 //  Created by Orest Patlyka on 8/3/19.
 //  Copyright © 2019 Orest Patlyka. All rights reserved.
@@ -8,8 +7,8 @@
 
 import UIKit
 
-class LoadingImageView: UIImageView {
-
+class DownloadingImageView: UIImageView {
+    
     var imageUrlString: String?
     
     func loadImage(from imageUrlString: String,
@@ -34,13 +33,12 @@ class LoadingImageView: UIImageView {
             }
         }
     }
-    
 }
 
 enum ImageDownloader {
     static func downloadImageData(from imageUrl: URL, completion: @escaping (Data?) -> Void) {
         URLSession.shared.dataTask(with: imageUrl) { (data, _, _) in
             completion(data)
-            }.resume()
+        }.resume()
     }
 }

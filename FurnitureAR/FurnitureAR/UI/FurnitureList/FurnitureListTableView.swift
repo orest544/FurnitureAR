@@ -17,9 +17,15 @@ protocol FurnitureListTableViewDelegate: AnyObject {
 
 final class FurnitureListTableView: UITableView {
     
+    // MARK: Interface
+    
     var furnitureListDelegate: FurnitureListTableViewDelegate?
     
+    // MARK: - Properties
+    
     private var furnitures = [Furniture]()
+    
+    // MARK: - Initialization
     
     override init(frame: CGRect, style: UITableView.Style = .plain) {
         super.init(frame: frame, style: style)
@@ -30,6 +36,8 @@ final class FurnitureListTableView: UITableView {
         super.init(coder: coder)
         configureTableView()
     }
+    
+    // MARK: - Configuring
     
     private func configureTableView() {
         dataSource = self
@@ -51,15 +59,19 @@ final class FurnitureListTableView: UITableView {
         furnitureListDelegate?.furnitureListPulledRefresh(self)
     }
     
+    // MARK: - Client methods
+    
     func insertNewFurnitures(_ newFurnitures: [Furniture]) {
         refreshControl?.endRefreshing()
+        
         let filteredNewFurnitures = newFurnitures.filter { !isFurnitureAlreadyExist($0) }
         addToFurnituresList(filteredNewFurnitures)
     }
     
+    // MARK: - Inserting new items
+    
     private func addToFurnituresList(_ newFurnitures: [Furniture]) {
         guard newFurnitures.hasElements else { return }
-        
         guard let startInsertingIndex = furnitures.lastElementIndex else {
             return
         }
@@ -81,6 +93,7 @@ final class FurnitureListTableView: UITableView {
     }
 }
 
+// MARK: - Data source
 extension FurnitureListTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return furnitures.count
@@ -93,11 +106,13 @@ extension FurnitureListTableView: UITableViewDataSource {
     }
 }
 
+// MARK: - Delegate
 extension FurnitureListTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as? FurnitureTableViewCell
         let selectedFurnitureImage = selectedCell?.furnitureImage
         
-        furnitureListDelegate?.furnitureList(self, didSelectFurniture: furnitures[indexPath.row], withImage: selectedFurnitureImage)
+        furnitureListDelegate?.furnitureList(self, didSelectFurniture: furnitures[indexPath.row],
+                                             withImage: selectedFurnitureImage)
     }
 }

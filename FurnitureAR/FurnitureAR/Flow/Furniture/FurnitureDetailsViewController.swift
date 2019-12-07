@@ -13,7 +13,7 @@ final class FurnitureDetailsViewController: UIViewController {
     // MARK: IBOutlets
     
     @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var imageView: LoadingImageView!
+    @IBOutlet private weak var imageView: DownloadingImageView!
     @IBOutlet private weak var tryWithARButton: UIButton!
     @IBOutlet private weak var descriptionLabel: UILabel!
     

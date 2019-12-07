@@ -86,7 +86,7 @@
                                                 </view>
                                                 <blurEffect style="regular"/>
                                             </visualEffectView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WQ6-TG-yYj" customClass="LoadingImageView" customModule="FurnitureAR" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WQ6-TG-yYj" customClass="DownloadingImageView" customModule="FurnitureAR" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="102.5" width="414" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="QSS-Fb-aDY"/>

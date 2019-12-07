@@ -10,12 +10,18 @@ import UIKit
 
 final class FurnitureTableViewCell: UITableViewCell, NibLoadableView, ReusableView {
     
+    // MARK: IBOutlets
+    
     @IBOutlet private weak var backShadowView: UIView!
-    @IBOutlet private weak var backgroundImageView: LoadingImageView!
+    @IBOutlet private weak var backgroundImageView: DownloadingImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
+    // MARK: - Properties
+    
     private let cornerRadius = CGFloat(12)
+    
+    // MARK: - Interface
     
     var viewModel: Furniture? {
         didSet {
@@ -30,10 +36,14 @@ final class FurnitureTableViewCell: UITableViewCell, NibLoadableView, ReusableVi
         return backgroundImageView.image
     }
     
+    // MARK: - Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureAppearence()
     }
+    
+    // MARK: - Configuring
     
     private func configureAppearence() {
         backShadowView.layer.cornerRadius = cornerRadius
