@@ -8,7 +8,6 @@ target 'FurnitureAR' do
   # Pods for FurnitureAR
 
 pod 'Firebase/Firestore'
-pod 'Firebase/Auth'
 
   target 'FurnitureARTests' do
     inherit! :search_paths
