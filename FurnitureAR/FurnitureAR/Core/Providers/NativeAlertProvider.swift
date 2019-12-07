@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NativeAlertProvider {
+final class NativeAlertProvider {
     static func networkingProblems(_ reasonMessage: String) -> UIAlertController {
         let alertController = UIAlertController(title: "Немає з'єднання з Інтернет",
                                                 message: reasonMessage,

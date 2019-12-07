@@ -21,10 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("ARKit is not available on this device.")
         }
         
-        ImageProvider.validateImages()
-        setRootVC()
+        #if DEBUG
+            ImageProvider.validateImages()
+        #endif
         
+        setRootVC()
         FirebaseApp.configure()
+        
         return true
     }
     

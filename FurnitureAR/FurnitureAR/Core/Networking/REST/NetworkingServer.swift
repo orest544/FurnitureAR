@@ -1,6 +1,5 @@
 //
 //  NetworkingServer.swift
-//  CurrencyConvertor
 //
 //  Created by Orest Patlyka on 9/5/19.
 //  Copyright © 2019 Orest Patlyka. All rights reserved.
@@ -32,7 +31,7 @@ extension NetworkingServerProtocol {
 
 enum NetworkingServer: NetworkingServerProtocol {
     
-    case EatStreet
+    case some
     
     var scheme: URLScheme {
         return .https

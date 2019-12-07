@@ -26,12 +26,12 @@ extension FirestoreRequestPerformable {
     
     func performFirestore<T: Decodable>(with endpoint: FirestoreEndpoint,
                                         completion: @escaping FirestoreRequestCompletion<T>) {
-        if let document = endpoint.document {
-            return
-        }
-        
-        Firestore.firestore().collection(endpoint.collection).getDocuments { (snapshot, error) in
- 
-        }
+//        if let document = endpoint.document {
+//            return
+//        }
+//        
+//        Firestore.firestore().collection(endpoint.collection).getDocuments { (snapshot, error) in
+// 
+//        }
     }
 }

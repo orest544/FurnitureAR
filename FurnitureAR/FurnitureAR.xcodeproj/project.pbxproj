@@ -49,8 +49,6 @@
 		04AEC656239C282900C3FE28 /* NativeAlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEC655239C282900C3FE28 /* NativeAlertProvider.swift */; };
 		04AEC658239C295300C3FE28 /* Error+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEC657239C295300C3FE28 /* Error+Message.swift */; };
 		04AEC65A239C30D600C3FE28 /* ARViewController+Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEC659239C30D600C3FE28 /* ARViewController+Session.swift */; };
-		04CD9940239807310016E002 /* String+ApproximateWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD993F239807310016E002 /* String+ApproximateWidth.swift */; };
-		04CD994C239807470016E002 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9945239807470016E002 /* UIImage+Gif.swift */; };
 		04CD9957239815860016E002 /* URLConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9951239815860016E002 /* URLConstructable.swift */; };
 		04CD9958239815860016E002 /* NetworkingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9952239815860016E002 /* NetworkingServer.swift */; };
 		04CD9959239815860016E002 /* RequestPerformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9953239815860016E002 /* RequestPerformable.swift */; };
@@ -136,8 +134,6 @@
 		04AEC655239C282900C3FE28 /* NativeAlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAlertProvider.swift; sourceTree = "<group>"; };
 		04AEC657239C295300C3FE28 /* Error+Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Message.swift"; sourceTree = "<group>"; };
 		04AEC659239C30D600C3FE28 /* ARViewController+Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Session.swift"; sourceTree = "<group>"; };
-		04CD993F239807310016E002 /* String+ApproximateWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ApproximateWidth.swift"; sourceTree = "<group>"; };
-		04CD9945239807470016E002 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		04CD9951239815860016E002 /* URLConstructable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstructable.swift; sourceTree = "<group>"; };
 		04CD9952239815860016E002 /* NetworkingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServer.swift; sourceTree = "<group>"; };
 		04CD9953239815860016E002 /* RequestPerformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPerformable.swift; sourceTree = "<group>"; };
@@ -267,8 +263,8 @@
 		040D59BF2397FE70002B5FA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04A80AC22399B6D1005A36E3 /* Models.scnassets */,
 				040D59962397FDD6002B5FA4 /* Assets.xcassets */,
+				04A80AC22399B6D1005A36E3 /* Models.scnassets */,
 				040D59982397FDD6002B5FA4 /* LaunchScreen.storyboard */,
 				040D599B2397FDD6002B5FA4 /* Info.plist */,
 				04CD996E23985F010016E002 /* GoogleService-Info.plist */,
@@ -309,7 +305,6 @@
 		045E943C239AD86C005441D6 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				04CD993F239807310016E002 /* String+ApproximateWidth.swift */,
 				045E9433239ACBE4005441D6 /* Collection+HasElements.swift */,
 				045E9456239AF7DA005441D6 /* Array+LastElementIndex.swift */,
 				04AEC657239C295300C3FE28 /* Error+Message.swift */,
@@ -323,7 +318,6 @@
 				04A80B092399BFFE005A36E3 /* UIStoryboard+RetrievingVCs.swift */,
 				04A80B0B2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift */,
 				045E943E239AD909005441D6 /* UIGestureRecognizer+Center.swift */,
-				04CD9945239807470016E002 /* UIImage+Gif.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -768,7 +762,6 @@
 				040D598B2397FDD5002B5FA4 /* AppDelegate.swift in Sources */,
 				04A80AD22399B7B9005A36E3 /* ARViewController+GestureRecognizer.swift in Sources */,
 				045E9453239AF4AB005441D6 /* CellReuseHelper.swift in Sources */,
-				04CD9940239807310016E002 /* String+ApproximateWidth.swift in Sources */,
 				04A80AD42399B7B9005A36E3 /* VirtualObjectARView.swift in Sources */,
 				04AEC658239C295300C3FE28 /* Error+Message.swift in Sources */,
 				04A80AD52399B7B9005A36E3 /* ARViewController.swift in Sources */,
@@ -790,7 +783,6 @@
 				045E9455239AF4B4005441D6 /* DownloadingImageView.swift in Sources */,
 				04A80AFF2399BAAA005A36E3 /* FocusSquareSegment.swift in Sources */,
 				040D59952397FDD5002B5FA4 /* FurnitureAR.xcdatamodeld in Sources */,
-				04CD994C239807470016E002 /* UIImage+Gif.swift in Sources */,
 				04A80AD12399B7B9005A36E3 /* ARViewController+CoachingOverlay.swift in Sources */,
 				04A80B0C2399C040005A36E3 /* UIStoryboard+InstantiateViewController.swift in Sources */,
 				045E9457239AF7DA005441D6 /* Array+LastElementIndex.swift in Sources */,

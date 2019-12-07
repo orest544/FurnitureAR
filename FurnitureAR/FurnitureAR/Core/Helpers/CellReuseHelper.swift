@@ -29,17 +29,6 @@ extension NibLoadableView where Self: UIView {
     }
 }
 
-//protocol ReusableNib: UIView {
-//    associatedtype ReusableNibType
-//    static var reusableNibType: ReusableNibType { get }
-//}
-//
-//extension ReusableNib {
-//    static var reusableNibName: String {
-//        return String(describing: reusableNibType.self)
-//    }
-//}
-
 // MARK: - UITableView + Reusable Cell
 extension UITableView {
     
@@ -52,13 +41,7 @@ extension UITableView {
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
-//
-//    func register<T: UITableViewCell>(_ : T.Type) where T: ReusableView, T: ReusableNib {
-//        let bundle = Bundle(for: T.self)
-//        let nib = UINib(nibName: T.reusableNibName, bundle: bundle)
-//        register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
-//    }
-    
+
     func dequeueReusableCell<T: UITableViewCell>(for indexPath : IndexPath) -> T where T: ReusableView {
         register(T.self)
         guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
@@ -74,14 +57,6 @@ extension UITableView {
         }
         return cell
     }
-    
-//    func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableView, T: ReusableNib  {
-//        register(T.self)
-//        guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
-//            fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
-//        }
-//        return cell
-//    }
     
     func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T: ReusableView, T: NibLoadableView {
         let bundle = Bundle(for: T.self)
@@ -138,6 +113,5 @@ extension UICollectionView {
         }
         return cell
     }
-    
 }
 

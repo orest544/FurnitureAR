@@ -11,14 +11,11 @@ import UIKit
 enum ImageProvider: String, CaseIterable {
     
     case add
-    case addPressed
     case buttonring
     case chair
     case lamp
     case restart
-    case restartPressed
     case vase
-    case Свічка
     case close
     
     var image: UIImage? {
