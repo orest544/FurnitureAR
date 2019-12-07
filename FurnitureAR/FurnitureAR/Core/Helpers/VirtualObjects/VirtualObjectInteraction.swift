@@ -1,7 +1,7 @@
 import UIKit
 import ARKit
 
-class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
+final class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     
     /// Developer setting to translate assuming the detected plane extends infinitely.
     let translateAssumingInfinitePlane = true

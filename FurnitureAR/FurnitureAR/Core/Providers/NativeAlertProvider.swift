@@ -10,10 +10,10 @@ import UIKit
 
 class NativeAlertProvider {
     static func networkingProblems(_ reasonMessage: String) -> UIAlertController {
-        let alertController = UIAlertController(title: "Internet connection issues",
+        let alertController = UIAlertController(title: "Немає з'єднання з Інтернет",
                                                 message: reasonMessage,
                                                 preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "Продовжити", style: .default)
         alertController.addAction(okAction)
         
         return alertController

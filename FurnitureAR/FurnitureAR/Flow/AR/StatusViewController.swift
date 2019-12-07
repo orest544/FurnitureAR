@@ -6,32 +6,17 @@ import ARKit
  the status of the AR experience, as well as the ability to control restarting
  the experience altogether.
 */
-class StatusViewController: UIViewController {
-    // MARK: - Types
-
-    enum MessageType {
-        case trackingStateEscalation
-        case planeEstimation
-        case contentPlacement
-        case focusSquare
-
-        static var all: [MessageType] = [
-            .trackingStateEscalation,
-            .planeEstimation,
-            .contentPlacement,
-            .focusSquare
-        ]
-    }
+final class StatusViewController: UIViewController {
 
     // MARK: - IBOutlets
 
-    @IBOutlet weak private var messagePanel: UIVisualEffectView! {
+    @IBOutlet private weak var messagePanel: UIVisualEffectView! {
         didSet {
             messagePanel.layer.cornerRadius = 8
         }
     }
-    @IBOutlet weak private var messageLabel: UILabel!
-    @IBOutlet weak private var restartExperienceButton: UIButton!
+    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var restartExperienceButton: UIButton!
 
     // MARK: - Properties
     
@@ -132,6 +117,24 @@ class StatusViewController: UIViewController {
     }
 }
 
+// MARK: - Types
+extension StatusViewController {
+     enum MessageType {
+         case trackingStateEscalation
+         case planeEstimation
+         case contentPlacement
+         case focusSquare
+
+         static var all: [MessageType] = [
+             .trackingStateEscalation,
+             .planeEstimation,
+             .contentPlacement,
+             .focusSquare
+         ]
+     }
+}
+
+// MARK: - Messages
 extension ARCamera.TrackingState {
     var presentationString: String {
         switch self {

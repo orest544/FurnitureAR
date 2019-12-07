@@ -2,7 +2,7 @@ import ARKit
 import SceneKit
 import UIKit
 
-class ARViewController: UIViewController {
+final class ARViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -85,6 +85,24 @@ class ARViewController: UIViewController {
         session.pause()
     }
 
+    // MARK: - IBActions
+    
+    /// Attaching selected virtual object to the reality
+    @IBAction private func addVirtualObject(_ sender: UIButton) {
+        guard virtualObjectLoader.loadedObjects.isEmpty else {
+            virtualObjectLoader.removeAllVirtualObjects()
+            setAddButtonImages()
+            return
+        }
+        guard let objectId = virtualObjectId,
+            let selectedVirtualObject = VirtualObject.byId(objectId) else {
+                statusViewController.showMessage("Не виявлено ідентифікаційного номера")
+                return
+        }
+        updateObjectAvailability()
+        loadVirtualObject(selectedVirtualObject)
+    }
+    
     // MARK: - Methods
     
     func setAddButtonImages() {
@@ -96,56 +114,10 @@ class ARViewController: UIViewController {
         addVirtualObjectButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         addVirtualObjectButton.setImage(ImageProvider.close.image, for: .normal)
     }
-    
-    func showCoachingOverlay() {
-        customCoachingOverlayView.isHidden = false
-        UIView.animate(withDuration: 0.24, animations: {
-            self.customCoachingOverlayView.alpha = 0.5
-        })
-    }
-    
-    func hideCoachingOverlay() {
-        UIView.animate(withDuration: 0.17, animations: {
-            self.customCoachingOverlayView.alpha = 0
-        }) { _ in
-            self.customCoachingOverlayView.isHidden = true
-        }
-    }
-    
-    // MARK: - Session management
-    
-    func restartExperience() {
-        guard isRestartAvailable, !virtualObjectLoader.isLoading else { return }
-        isRestartAvailable = false
+}
 
-        statusViewController.cancelAllScheduledMessages()
-        virtualObjectLoader.removeAllVirtualObjects()
-
-        resetTracking()
-        
-        // Disable restart for a while in order to give the session time to restart.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            self.isRestartAvailable = true
-            self.upperControlsView.isHidden = false
-        }
-    }
-    
-    /// Creates a new AR configuration to run on the `session`.
-    func resetTracking() {
-        virtualObjectInteraction.selectedObject = nil
-        
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = [.horizontal, .vertical]
-        configuration.environmentTexturing = .automatic
-        
-        session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-
-        statusViewController.scheduleMessage("Знайдіть поверхню, щоб розмістити об'єкт", inSeconds: 7.5, messageType: .planeEstimation)
-        setAddButtonImages()
-    }
-
-    // MARK: - Focus Square
-
+// MARK: - Focus Square
+extension ARViewController {
     func updateFocusSquare(isObjectVisible: Bool) {
         if isObjectVisible || virtualObjectLoader.loadedObjects.hasElements {
             focusSquare.hide()
@@ -177,9 +149,10 @@ class ARViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Error handling
-    
+}
+
+// MARK: - Error handling
+extension ARViewController {
     func displayErrorMessage(title: String, message: String) {
         // Present an alert informing about the error that has occurred.
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
