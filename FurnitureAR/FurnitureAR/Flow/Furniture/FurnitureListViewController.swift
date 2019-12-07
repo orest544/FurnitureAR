@@ -58,8 +58,9 @@ final class FurnitureListViewController: UIViewController {
     
     private func openDetails(of furniture: Furniture, furnitureImage: UIImage?) {
         let furnitureDetailsViewController = UIStoryboard.Furniture.details
-        furnitureDetailsViewController.selectedFurniture = furniture
-        furnitureDetailsViewController.selectedFurnitureImage = furnitureImage
+        
+        let furnitureDetails = FurnitureDetailsViewController.FurnitureDetails(furniture: furniture, image: furnitureImage)
+        furnitureDetailsViewController.selectedFurnitureDetails = furnitureDetails
         
         navigationController?.pushViewController(furnitureDetailsViewController,
                                                  animated: true)
