@@ -21,7 +21,6 @@ class ARViewController: UIViewController {
     let coachingOverlay = ARCoachingOverlayView()
     var focusSquare = FocusSquare()
     
-    /// The view controller that displays the status and "restart experience" UI.
     lazy var statusViewController: StatusViewController = {
         return children.lazy.compactMap({ $0 as? StatusViewController }).first!
     }()
@@ -184,7 +183,7 @@ class ARViewController: UIViewController {
     func displayErrorMessage(title: String, message: String) {
         // Present an alert informing about the error that has occurred.
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let restartAction = UIAlertAction(title: "Restart Session", style: .default) { _ in
+        let restartAction = UIAlertAction(title: "Перезапустити сесію", style: .default) { _ in
             alertController.dismiss(animated: true, completion: nil)
             self.resetTracking()
         }

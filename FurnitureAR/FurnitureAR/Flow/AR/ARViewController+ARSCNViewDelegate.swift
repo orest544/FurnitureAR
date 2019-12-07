@@ -18,7 +18,7 @@ extension ARViewController: ARSCNViewDelegate, ARSessionDelegate {
             self.statusViewController.cancelScheduledMessage(for: .planeEstimation)
             self.statusViewController.showMessage("Розпізнано поверхню")
             if self.virtualObjectLoader.loadedObjects.isEmpty {
-                self.statusViewController.scheduleMessage("Нажміть \"+\" щоб добавити об'єкт", inSeconds: 7.5, messageType: .contentPlacement)
+                self.statusViewController.scheduleMessage("Натисніть \"+\" щоб добавити об'єкт", inSeconds: 7.5, messageType: .contentPlacement)
             }
         }
     }
@@ -60,7 +60,7 @@ extension ARViewController: ARSCNViewDelegate, ARSessionDelegate {
         let errorMessage = messages.compactMap({ $0 }).joined(separator: "\n")
         
         DispatchQueue.main.async {
-            self.displayErrorMessage(title: "The AR session failed.", message: errorMessage)
+            self.displayErrorMessage(title: "Сесія доповненої реальності невдала.", message: errorMessage)
         }
     }
     

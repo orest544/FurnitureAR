@@ -32,7 +32,6 @@ class FurnitureListViewController: UIViewController {
             }
             switch result {
             case .success(let furnitures):
-                print("Success!\n", furnitures)
                 DispatchQueue.main.async {
                     self?.furnitureListTableView.insertNewFurnitures(furnitures)
                 }

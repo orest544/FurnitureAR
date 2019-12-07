@@ -21,7 +21,7 @@ extension ARViewController {
      estimated by a hit test from the center of the screen. **/
     func placeVirtualObject(_ virtualObject: VirtualObject) {
         guard focusSquare.state != .initializing, let query = virtualObject.raycastQuery else {
-            self.statusViewController.showMessage("CANNOT PLACE OBJECT\nTry moving left or right.")
+            self.statusViewController.showMessage("Неможливо розмістити об'єкт\nСпробуйте рухатися вправо і вліво")
             
             virtualObjectLoader.removeAllVirtualObjects()
             virtualObjectInteraction.selectedObject = nil

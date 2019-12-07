@@ -136,30 +136,30 @@ extension ARCamera.TrackingState {
     var presentationString: String {
         switch self {
         case .notAvailable:
-            return "TRACKING UNAVAILABLE"
+            return "Відслідковування недоступне"
         case .normal:
-            return "TRACKING NORMAL"
+            return "Відслідковування в нормальному режимі"
         case .limited(.excessiveMotion):
-            return "TRACKING LIMITED\nExcessive motion"
+            return "Відслідковування обмежене"
         case .limited(.insufficientFeatures):
-            return "TRACKING LIMITED\nLow detail"
+            return "Відслідковування обмежене\nМало деталей"
         case .limited(.initializing):
             return "Ініціалізація"
         case .limited(.relocalizing):
-            return "Recovering from interruption"
+            return "Відновлення після переревання"
         @unknown default:
-            return "Unknown tracking state."
+            return "Невизначений стан відслідковування"
         }
     }
 
     var recommendation: String? {
         switch self {
         case .limited(.excessiveMotion):
-            return "Try slowing down your movement, or reset the session."
+            return "Спробуйте сповільнити ваші рухи, щоб перезапустити сесію"
         case .limited(.insufficientFeatures):
-            return "Try pointing at a flat surface, or reset the session."
+            return "Спробуйте фокусуватися на плоскій поверхні, або перезапустіть сесію"
         case .limited(.relocalizing):
-            return "Return to the location where you left off or try resetting the session."
+            return "Поверніться на поверхню з якої ви перемістилися, або перезапустіть сесію"
         default:
             return nil
         }
