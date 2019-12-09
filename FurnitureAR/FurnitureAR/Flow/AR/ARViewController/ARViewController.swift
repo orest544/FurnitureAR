@@ -53,8 +53,7 @@ final class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sceneView.delegate = self
-        sceneView.session.delegate = self
+        configureSceneView()
         
         // Set up coaching overlay.
         setupCoachingOverlay()
@@ -105,6 +104,14 @@ final class ARViewController: UIViewController {
         loadVirtualObject(selectedVirtualObject)
     }
     
+    // MARK: - Configuration
+    
+    private func configureSceneView() {
+        sceneView.delegate = self
+        sceneView.session.delegate = self
+//        sceneView.debugOptions = [.showFeaturePoints]
+    }
+    
     // MARK: - Methods
     
     func setAddButtonImages() {
@@ -117,7 +124,7 @@ final class ARViewController: UIViewController {
         addVirtualObjectButton.setImage(ImageProvider.close.image, for: .normal)
     }
     
-    func prepareForClose() {
+    private func prepareForClose() {
         session.pause()
         statusViewController.cancelAllScheduledMessages()
         virtualObjectLoader.removeAllVirtualObjects()

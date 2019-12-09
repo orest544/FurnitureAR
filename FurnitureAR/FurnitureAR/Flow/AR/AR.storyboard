@@ -12,19 +12,19 @@
             <objects>
                 <viewController id="UYT-Dz-Sdf" customClass="StatusViewController" customModule="FurnitureAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="63G-fT-RHX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-D9-z8G" userLabel="Message Panel">
-                                <rect key="frame" x="16" y="14" width="140" height="34.666666666666664"/>
+                                <rect key="frame" x="16" y="14" width="140" height="34"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="noY-yt-8N9">
-                                    <rect key="frame" x="0.0" y="0.0" width="140" height="34.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FlZ-zi-WSN">
-                                            <rect key="frame" x="0.0" y="0.0" width="140" height="34.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="34.333333333333336"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wVt-Hh-cBC">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="34.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="34.333333333333336"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" text="Tracking status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-Nq-L7d" userLabel="Messages label">
@@ -86,7 +86,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JNK-pm-wUd"/>
                     </view>
-                    <size key="freeformSize" width="414" height="300"/>
                     <connections>
                         <outlet property="messageLabel" destination="QVV-Nq-L7d" id="P2z-Xr-gOR"/>
                         <outlet property="messagePanel" destination="Pz7-D9-z8G" id="e5X-ZB-8rZ"/>
@@ -95,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzu-4s-bVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-437"/>
+            <point key="canvasLocation" x="58" y="-292"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IRD-DK-Wd9">
