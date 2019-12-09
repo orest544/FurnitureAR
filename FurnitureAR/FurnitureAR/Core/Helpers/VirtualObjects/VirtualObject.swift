@@ -18,13 +18,13 @@ class VirtualObject: SCNReferenceNode {
     
     /// The alignments that are allowed for a virtual object.
     var allowedAlignment: ARRaycastQuery.TargetAlignment {
-        if modelName == "sticky note" {
-            return .any
-        } else if modelName == "painting" {
-            return .vertical
-        } else {
-            return .horizontal
-        }
+//        if modelName == "sticky note" {
+//            return .any
+//        } else if modelName == "painting" {
+//            return .vertical
+//        } else {
+        return .horizontal
+//        }
     }
     
     /// Rotates the first child node of a virtual object.
@@ -44,7 +44,7 @@ class VirtualObject: SCNReferenceNode {
             return childNodes.first!.scale
         }
         set (newValue) {
-            childNodes.first!.scale = newValue//newScale
+            childNodes.first!.scale = newValue
         }
     }
     

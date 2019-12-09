@@ -7,10 +7,10 @@ final class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     let translateAssumingInfinitePlane = true
     
     /// The scene view to hit test against when moving virtual content.
-    let sceneView: VirtualObjectARView
+    var sceneView: VirtualObjectARView
     
     /// A reference to the view controller.
-    let viewController: ARViewController
+    weak var viewController: ARViewController?
     
     /**
      The object that has been most recently intereacted with.
@@ -179,8 +179,9 @@ final class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
         object.stopTrackedRaycast()
 
         // Update the object by using a one-time position request.
-        if let query = sceneView.raycastQuery(from: screenPos, allowing: .estimatedPlane, alignment: object.allowedAlignment) {
-            viewController.createRaycastAndUpdate3DPosition(of: object, from: query)
+        if let query = sceneView.raycastQuery(from: screenPos, allowing: .estimatedPlane, alignment: object.allowedAlignment),
+            let arVC = viewController {
+            arVC.createRaycastAndUpdate3DPosition(of: object, from: query)
         }
     }
     
@@ -192,12 +193,12 @@ final class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
 
         // Attempt to create a new tracked raycast from the current location.
         if let query = sceneView.raycastQuery(from: screenPos, allowing: .estimatedPlane, alignment: object.allowedAlignment),
-            let raycast = viewController.createTrackedRaycastAndSet3DPosition(of: object, from: query) {
+            let raycast = viewController?.createTrackedRaycastAndSet3DPosition(of: object, from: query) {
             object.raycast = raycast
         } else {
             // If the tracked raycast did not succeed, simply update the anchor to the object's current position.
             object.shouldUpdateAnchor = false
-            viewController.updateQueue.async {
+            viewController?.updateQueue.async {
                 self.sceneView.addOrUpdateAnchor(for: object)
             }
         }

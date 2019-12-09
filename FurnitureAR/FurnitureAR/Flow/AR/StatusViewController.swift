@@ -31,6 +31,16 @@ final class StatusViewController: UIViewController {
     
     private var timers: [MessageType: Timer] = [:]
     
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    deinit {
+        print("StatusViewController deinited")
+    }
+    
     // MARK: - Message Handling
     
     func showMessage(_ text: String, autoHide: Bool = true) {
@@ -80,15 +90,15 @@ final class StatusViewController: UIViewController {
     func escalateFeedback(for trackingState: ARCamera.TrackingState, inSeconds seconds: TimeInterval) {
         cancelScheduledMessage(for: .trackingStateEscalation)
 
-        let timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: false, block: { [unowned self] _ in
-            self.cancelScheduledMessage(for: .trackingStateEscalation)
+        let timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: false, block: { [weak self] _ in
+            self?.cancelScheduledMessage(for: .trackingStateEscalation)
 
             var message = trackingState.presentationString
             if let recommendation = trackingState.recommendation {
                 message.append(": \(recommendation)")
             }
 
-            self.showMessage(message, autoHide: false)
+            self?.showMessage(message, autoHide: false)
         })
 
         timers[.trackingStateEscalation] = timer

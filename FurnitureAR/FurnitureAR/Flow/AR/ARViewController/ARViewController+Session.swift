@@ -68,9 +68,9 @@ extension ARViewController {
         resetTracking()
         
         // Disable restart for a while in order to give the session time to restart.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            self.isRestartAvailable = true
-            self.upperControlsView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [weak self] in
+            self?.isRestartAvailable = true
+            self?.upperControlsView.isHidden = false
         }
     }
     
@@ -79,7 +79,7 @@ extension ARViewController {
         virtualObjectInteraction.selectedObject = nil
         
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.planeDetection = [.horizontal]
         configuration.environmentTexturing = .automatic
         
         session.run(configuration, options: [.resetTracking, .removeExistingAnchors])

@@ -63,10 +63,8 @@ final class ARViewController: UIViewController {
         sceneView.scene.rootNode.addChildNode(focusSquare)
 
         // Hook up status view controller callback(s).
-        statusViewController.restartExperienceHandler = { [unowned self] in
-            self.dismiss(animated: true)
-            
-            //self.restartExperience()
+        statusViewController.restartExperienceHandler = { [weak self] in
+            self?.dismiss(animated: true)
         }
     }
 
@@ -82,7 +80,11 @@ final class ARViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        session.pause()
+        prepareForClose()
+    }
+    
+    deinit {
+        print("ARViewController deinited")
     }
 
     // MARK: - IBActions
@@ -114,6 +116,14 @@ final class ARViewController: UIViewController {
         addVirtualObjectButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         addVirtualObjectButton.setImage(ImageProvider.close.image, for: .normal)
     }
+    
+    func prepareForClose() {
+        session.pause()
+        statusViewController.cancelAllScheduledMessages()
+        virtualObjectLoader.removeAllVirtualObjects()
+        virtualObjectInteraction.trackedObject = nil
+        virtualObjectInteraction.selectedObject = nil
+    }
 }
 
 // MARK: - Focus Square
@@ -125,12 +135,12 @@ extension ARViewController {
             focusSquare.unhide()
             statusViewController.scheduleMessage("Спробуйте рухатися вліво і вправо", inSeconds: 5.0, messageType: .focusSquare)
         }
-        
+
         // Perform ray casting only when ARKit tracking is in a good state.
         if let camera = session.currentFrame?.camera, case .normal = camera.trackingState,
             let query = sceneView.getRaycastQuery(),
             let result = sceneView.castRay(for: query).first {
-            
+
             updateQueue.async {
                 self.sceneView.scene.rootNode.addChildNode(self.focusSquare)
                 self.focusSquare.state = .detecting(raycastResult: result, camera: camera)
